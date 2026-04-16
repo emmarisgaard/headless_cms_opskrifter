@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    background: var(--grey);
+}
+
+/* LAYOUT */
+/* Får filter til at fylde 1/4 og hovedindhold til at fylde 3/4 */
+.sideinddeling {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: var(--mdSpacer);
+    padding: var(--lgSpacer);
+}
+
+/* FILTER SIDEBAR */
+.filter-sidebar {
+
+    /* skjul checkbox i overskrifter i accordion */
+    .filter-toggle {
+        display: none;
+    }
+}
+
+/* FILTER SEKTIONER - overskrifter */
+/* Ændrer styling kun på de labels der er children af .filter-sektion - dvs. overskrifter i accordion */
+.filter-sektion>label {
+    background-color: var(--darkGreen);
+    color: var(--white);
+
+    padding: var(--smSpacer);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1px;
+
+    cursor: pointer;
+}
+
+/* PIL ROTATION */
+/* Når checkboxen (accordion-toggle) er checked (åben),
+   finder vi det efterfølgende label og roterer ikonet (i) 180 grader, så pilen vender op */
+
+.filter-toggle:checked+label i {
+    transform: rotate(180deg);
+
+}
+
+/* FILTER INDHOLD */
+/* Alt indhold (ikke overskrifter) skal have hvid baggrund og sort tekst */
+.filter-indhold {
+    background-color: var(--white);
+    color: var(--black);
+
+    max-height: 0;
+    overflow: hidden;
+    /* Ingen max-højde for at den kan blive helt skjult */
+
+    transition: max-height 0.3s ease;
+    /* animerer hvordan den åbner/lukker sig */
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* ÅBEN ACCORDION  */
+/* Når checkboxen (filter-toggle) er checked (åben),
+   vises filter-indholdet ved at give det en max-height,
+   så accordion-menuen kan foldes ud med animation */
+.filter-toggle:checked~.filter-indhold {
+    max-height: 500px;
+}
+
+/* FILTER RÆKKER */
+/* Gør sådan at de vises i en kolonne */
+.filter-indhold label {
+    padding: var(--smSpacer);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* når man hover over en filter-række */
+.filter-indhold label:hover {
+    background-color: var(--lightGreen);
+}
+
+/* checkbox farve */
+.filter-indhold input[type="checkbox"] {
+    accent-color: var(--darkGreen);
+    /* https://www.w3schools.com/cssref/css4_pr_accent-color.php */
+}
+
+/* HØJRE SIDE */
+.hovedindhold {
+    width: 100%;
+}
