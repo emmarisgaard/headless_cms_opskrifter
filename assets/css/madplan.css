@@ -1,42 +1,28 @@
 * {
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    margin: 0;
+    margin: 0 40px;
+    background-color: #f0f0f0;
 }
 
-/* Variable */
-
-/* Farver */
+/* Variabler */
 :root {
     --darkGreen: #33522A;
     --lightGreen: #b5d2ac;
     --grey: #f0f0f0;
-    --black: #000000;
     --white: #ffffff;
-    background-color: var(--grey);
-}
 
-/* Layout */
-:root {
     --smSpacer: 10px;
     --mdSpacer: 20px;
     --lgSpacer: 40px;
 }
 
-/* Font */
-* {
-    font-family: 'Arial', sans-serif;
-}
-
 /* Typography */
 p {
     font-size: 16px;
-}
-
-h1 {
-    font-size: 32px;
 }
 
 h2 {
@@ -48,176 +34,218 @@ h3 {
 }
 
 img {
-    display: block;
     max-width: 100%;
+    display: block;
 }
 
-/* Layout */
+/* MADPLAN SIDE */
 
+/* uge oversigt*/
 
-.mp-page {
-    padding: 1.5rem;
-    max-width: 1100px;
-    margin: 0 auto;
+.uge-header {
+    display: flex;
+    align-items: center;
 }
 
-.mp-section {
-    margin-bottom: 2rem;
+.uge-header button {
+    background-color: var(--lightGreen);
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    margin-left: var(--mdSpacer);
 }
 
-.mp-button {
-    background: var(--lightGreen);
-    border: 1px solid var(--darkGreen);
-    border-radius: 6px;
-    padding: 6px 12px;
+.uge-header button:hover {
+    background-color: var(--darkGreen);
+    font-size: 18px;
     cursor: pointer;
-    font-size: 14px;
 }
 
-/* Week header */
-.week-header {
-    margin-bottom: 1rem;
+.add {
+    background: var(--white);
+    padding: var(--smSpacer);
+    border-radius: 5px;
+    border: 1px dashed grey;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.week-title {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-/* Days grid */
-.days-grid {
+/* Week grid */
+.weekdays {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 8px;
+    gap: var(--smSpacer);
 }
 
-.day-card {
-    background: #fff;
-    border: 1px solid #e0e0d8;
-    border-radius: 12px;
-    padding: 10px;
-    min-height: 120px;
+/* Uge Cards */
+.day-card,
+.onsdag-card {
+    background: var(--white);
+    padding: var(--smSpacer);
+    border-radius: 5px;
+    border: 1px solid grey;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    height: 300px;
 }
 
-.day-card.today {
+.onsdag-card {
     background: var(--lightGreen);
-    border-color: var(--darkGreen);
-    color: #000000;
 }
 
-.day-label {
-    font-size: 16px;
-    font-weight: bold;
+.day-card h3,
+.onsdag-card h3 {
+    margin: 0 0 var(--smSpacer) 0;
     color: var(--darkGreen);
+}
+
+.onsdag-card h3 {
+    color: black;
 }
 
 .day-number {
-    font-size: 12px;
+    margin: 0;
     font-weight: bold;
 }
 
-.day-number.selected {
-    color: var(--darkGreen);
+/* Mad på uge cards */
+.food-list {
+    margin-top: var(--smSpacer);
+    display: flex;
+    flex-direction: column;
+    gap: var(--smSpacer);
 }
 
-.day-card.today .day-label {
-    color: rgba(0, 0, 0, 0.7);
-}
-
-.meal-chip {
+.mp-food {
+    margin: 0;
     background: var(--lightGreen);
-    border-radius: 6px;
-    padding: 4px 6px;
-    width: fit-content;
-
+    padding: var(--smSpacer);
+    border-radius: 5px;
+    border: 1px solid grey;
 }
 
-.day-card.today .meal-chip {
+.onsdag-card .mp-food {
     background: var(--darkGreen);
-    color: #ffffff;
+    color: white;
 }
 
-/* Detail section */
-.detail-header {
-    font-weight: bold;
-    margin-bottom: 1rem;
+.time {
+    margin-top: auto;
+    font-size: 14px;
+    color: rgb(72, 72, 72);
 }
 
-.recipes-detail {
+/* Opskrifter */
+
+.opskrift-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--mdSpacer);
 }
 
 .recipe-card {
     display: flex;
-    background: #fff;
-    border: 1px solid #e0e0d8;
+    gap: var(--mdSpacer);
+    background: var(--white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 200px;
+
+    padding: 0;
     overflow: hidden;
+    /* 👈 vigtigt for kant-til-kant billede */
 }
 
-.recipe-img {
-    width: 300px;
+/* billede */
+.recipe-card img {
+    width: auto;
+    height: 100%;
     object-fit: cover;
+    display: block;
 }
 
-.recipe-info {
-    padding: 10px;
+/* content */
+.recipe-content {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    justify-content: space-between;
+    flex: 1;
+    padding: var(--smSpacer);
+}
+
+.recipe-top {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
 .recipe-name {
-    font-weight: 500;
+    margin: 0;
 }
 
-.recipe-meta {
-    color: #666;
+.recipe-time {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
 }
 
-/* Recommended */
-.row-between {
+.recipe-actions {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
+    flex-direction: column;
+    gap: var(--smSpacer);
 }
 
-.section-title {
-    font-weight: bold;
+.mp-button {
+    border: 1px solid var(--darkGreen);
+    background: var(--lightGreen);
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.recommended-grid {
+.mp-button:hover {
+    background: var(--darkGreen);
+    color: white;
+}
+
+/* anbefalede opskrifter */
+
+.anbefalede-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
+    gap: var(--mdSpacer);
 }
 
-.rec-card {
-    background: #fff;
-    border: 1px solid #e0e0d8;
+.anb-card {
+    background: var(--white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    padding: 0;
     overflow: hidden;
+    /* 👈 vigtigt */
 }
 
-.rec-img {
+/* billede */
+.anb-card img {
     width: 100%;
-    height: 120px;
+    height: auto;
     object-fit: cover;
+    display: block;
 }
 
-.rec-body {
-    padding: 10px;
+/* tekst */
+.anb-card h3,
+.anb-card p {
+    padding: 0 var(--smSpacer);
 }
 
-.rec-name {
-    font-weight: 500;
-    margin-bottom: 4px;
+/* spacing */
+.mp-h2 {
+    padding: var(--lgSpacer) 0 var(--mdSpacer) 0;
 }
 
-.rec-meta {
-    color: #888;
-}
+/* MADPLAN SIDE SLUT */

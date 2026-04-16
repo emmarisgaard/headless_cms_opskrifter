@@ -8,136 +8,188 @@
 	<link rel="stylesheet" href="./assets/css/style.css" />
 	<link rel="stylesheet" href="./assets/css/madplan.css" />
 	<script src="./assets/js/app.js" defer></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
-	<main class="mp-page">
+	<main class="madplan-page">
 
-		<!-- Ugevisning -->
-		<section class="mp-section">
-			<header class="week-header">
-				<h2 class="week-title">Uge 16 · 13–19 april</h2>
-				<button class="week-button"><i class="fa-solid fa-chevron-left"></i></button>
-				<button class="week-button"><i class="fa-solid fa-chevron-right"></i></button>
-			</header>
-
-			<div class="days-grid">
-				<article class="day-card">
-					<h3 class="day-label">MANDAG</h3>
-					<p class="day-number">13.</p>
-					<p class="meal-chip">Lasagne</p>
-				</article>
-
-				<article class="day-card">
-					<h3 class="day-label">TIRSDAG</h3>
-					<p class="day-number">14.</p>
-					<p class="meal-chip">Pizza</p>
-				</article>
-
-				<article class="day-card today">
-					<h3 class="day-label">ONSDAG</h3>
-					<p class="day-number">15.</p>
-					<p class="meal-chip">Lasagne</p>
-					<p class="meal-chip">Spaghetti</p>
-				</article>
-
-				<article class="day-card">
-					<h3 class="day-label">TORSDAG</h3>
-					<p class="day-number">16.</p>
-					<p class="meal-chip">Spinat pasta</p>
-				</article>
-
-				<article class="day-card">
-					<h3 class="day-label">FREDAG</h3>
-					<p class="day-number">17.</p>
-					<p class="meal-chip">Suppe</p>
-				</article>
-
-				<article class="day-card">
-					<h3 class="day-label">LØRDAG</h3>
-					<p class="day-number">18.</p>
-					<p class="meal-chip">Rodfrugter</p>
-				</article>
-
-				<article class="day-card">
-					<h3 class="day-label">SØNDAG</h3>
-					<p class="day-number">19.</p>
-					<p class="meal-chip">Burritos</p>
-				</article>
-			</div>
+		<section class="ugeoversigt">
+			<article class="uge-header">
+				<h2 class="mp-h2">Uge 16 · 13-19 april</h2>
+				<div>
+					<button><i class="fa-solid fa-chevron-left"></i></button>
+					<button><i class="fa-solid fa-chevron-right"></i></button>
+				</div>
+			</article>
 		</section>
 
-		<!-- Daglig detalje -->
-		<section class="mp-section">
-			<header>
-				<h2 class="detail-header">
-					Onsdag d. 15. april · Lasagne · Spaghetti m. kødboller
-				</h2>
-			</header>
+		<section class="weekdays">
 
-			<div class="recipes-detail">
+			<article class="day-card">
+				<h3>MANDAG</h3>
+				<p class="day-number">13.</p>
+
+				<div class="food-list">
+					<p class="mp-food">Lasagne</p>
+				</div>
+				<p class="add">+ Tilføj opskrift</p>
+				<span class="time"><i class="fa-regular fa-clock"></i> 1,5 time</span>
+			</article>
+
+			<article class="day-card">
+				<h3>TIRSDAG</h3>
+				<p class="day-number">14.</p>
+
+				<div class="food-list">
+					<p class="mp-food">Pizza</p>
+				</div>
+				<p class="add">+ Tilføj opskrift</p>
+				<span class="time"><i class="fa-regular fa-clock"></i> 1 time</span>
+			</article>
+
+			<article class="onsdag-card">
+				<h3>ONSDAG</h3>
+				<p class="day-number">15.</p>
+
+				<div class="food-list">
+					<p class="mp-food">Lasagne</p>
+					<p class="mp-food">Spaghetti</p>
+				</div>
+				<p class="add">+ Tilføj opskrift</p>
+				<span class="time"><i class="fa-regular fa-clock"></i> 1,5 time · 45 minutter</span>
+			</article>
+
+			<article class="day-card">
+				<h3>TORSDAG</h3>
+				<p class="day-number">16.</p>
+
+				<div class="food-list">
+					<p class="mp-food">Spinat pasta</p>
+				</div>
+				<p class="add">+ Tilføj opskrift</p>
+				<span class="time"><i class="fa-regular fa-clock"></i> 45 minutter</span>
+			</article>
+
+			<article class="day-card">
+				<h3>FREDAG</h3>
+				<p class="day-number">17.</p>
+
+				<div class="food-list">
+					<p class="mp-food">Suppe</p>
+				</div>
+				<p class="add">+ Tilføj opskrift</p>
+				<span class="time"><i class="fa-regular fa-clock"></i> 50 minutter</span>
+			</article>
+
+			<article class="day-card">
+				<h3>LØRDAG</h3>
+				<p class="day-number">18.</p>
+
+				<div class="food-list">
+					<p class="mp-food">Rodfrugter</p>
+				</div>
+				<p class="add">+ Tilføj opskrift</p>
+				<span class="time"><i class="fa-regular fa-clock"></i> 1 time</span>
+			</article>
+
+			<article class="day-card">
+				<h3>SØNDAG</h3>
+				<p class="day-number">19.</p>
+
+				<div class="food-list">
+					<p class="mp-food">Burritos</p>
+				</div>
+				<p class="add">+ Tilføj opskrift</p>
+				<span class="time"><i class="fa-regular fa-clock"></i> 1,5 time</span>
+			</article>
+
+		</section>
+
+		<section class="madplan-opskrifter">
+
+			<h2 class="mp-h2">
+				Valgt: Onsdag d. 15. april · Lasagne · Spaghetti m. kødboller
+			</h2>
+
+			<div class="opskrift-grid">
+
 				<article class="recipe-card">
-					<img src="./assets/img/better-lasagna.webp" alt="Lasagne" class="recipe-img" />
-					<div class="recipe-info">
-						<h3 class="recipe-name">Lasagne</h3>
-						<p class="recipe-meta">⏱ 1 time 30 min · Begynder</p>
-						<button class="mp-button">+ Indkøbsliste</button>
-						<button class="mp-button">- Madplan</button>
+					<img src="./assets/img/better-lasagna.webp" alt="Lasagne">
+					<div class="recipe-content">
+						<div class="recipe-top">
+							<h3 class="recipe-name">Lasagne</h3>
+							<p class="recipe-time">
+								<i class="fa-regular fa-clock"></i> 1,5 time · Begynder
+							</p>
+						</div>
+						<div class="recipe-actions">
+							<button class="mp-button">+ Indkøbsliste</button>
+							<button class="mp-button">- Madplan</button>
+						</div>
 					</div>
 				</article>
 
 				<article class="recipe-card">
-					<img src="./assets/img/spaghetti-and-meatballs.webp" alt="Spaghetti med kødboller"
-						class="recipe-img" />
-					<div class="recipe-info">
-						<h3 class="recipe-name">Spaghetti m. kødboller</h3>
-						<p class="recipe-meta">⏱ 1 time 30 min · Begynder</p>
-						<button class="mp-button">+ Indkøbsliste</button>
-						<button class="mp-button">- Madplan</button>
+					<img src="./assets/img/spaghetti-and-meatballs.webp" alt="Spaghetti m. kødboller">
+					<div class="recipe-content">
+						<div class="recipe-top">
+							<h3 class="recipe-name">Spaghetti m. kødboller</h3>
+							<p class="recipe-time">
+								<i class="fa-regular fa-clock"></i> 1,5 time · Begynder
+							</p>
+						</div>
+						<div class="recipe-actions">
+							<button class="mp-button">+ Indkøbsliste</button>
+							<button class="mp-button">- Madplan</button>
+						</div>
 					</div>
+
 				</article>
+
 			</div>
+
 		</section>
+
 
 		<!-- Anbefalede opskrifter -->
 		<section class="mp-section">
 			<header class="row-between">
-				<h2 class="section-title">Anbefalede opskrifter</h2>
+				<h2 class="mp-h2">Anbefalede opskrifter</h2>
 			</header>
 
-			<div class="recommended-grid">
+			<div class="anbefalede-grid">
 
-				<article class="rec-card">
+				<article class="anb-card">
 					<img src="./assets/img/chicken-and-dumplings.webp" alt="Kylling og dumplings" class="rec-img" />
-					<div class="rec-body">
+					<div class="anb-body">
 						<h3 class="rec-name">Kylling og dumplings</h3>
-						<p class="rec-meta">⏱ 1 time 30 min · Begynder</p>
+						<p class="anb-tid"><i class="fa-regular fa-clock"></i> 1 time · Begynder</p>
 					</div>
 				</article>
 
-				<article class="rec-card">
+				<article class="anb-card">
 					<img src="./assets/img/beef-stroganoff.webp" alt="Bøf stroganoff" class="rec-img" />
-					<div class="rec-body">
+					<div class="anb-body">
 						<h3 class="rec-name">Bøf stroganoff</h3>
-						<p class="rec-meta">⏱ 1 time 30 min · Begynder</p>
+						<p class="anb-tid"><i class="fa-regular fa-clock"></i> 50 minutter · Begynder</p>
 					</div>
 				</article>
 
-				<article class="rec-card">
+				<article class="anb-card">
 					<img src="./assets/img/macaroni-and-cheese.webp" alt="Mac and cheese" class="rec-img" />
-					<div class="rec-body">
+					<div class="anb-body">
 						<h3 class="rec-name">Mac and cheese</h3>
-						<p class="rec-meta">⏱ 1 time 30 min · Begynder</p>
+						<p class="anb-tid"><i class="fa-regular fa-clock"></i> 30 minutter · Begynder</p>
 					</div>
 				</article>
 
-				<article class="rec-card">
-					<img src="./assets/img/one-pot-zucchini-mushroom-pasta.webp" alt="Pasta med squash"
-						class="rec-img" />
-					<div class="rec-body">
+				<article class="anb-card">
+					<img src="./assets/img/one-pot-zucchini-mushroom-pasta.webp" alt="Pasta med squash" />
+					<div class="anb-body">
 						<h3 class="rec-name">Pasta med squash</h3>
-						<p class="rec-meta">⏱ 1 time 30 min · Begynder</p>
+						<p class="anb-tid"><i class="fa-regular fa-clock"></i> 1,5 time · Begynder</p>
 					</div>
 				</article>
 
