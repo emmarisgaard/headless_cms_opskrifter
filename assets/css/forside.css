@@ -105,3 +105,117 @@ body {
 .next {
     left: 42vw;
 }
+
+
+
+/* Udvalgte opskrifter sektion + kategori sektion */
+.udvalgteOpskrifter,
+.kategoriSektion {
+    margin: var(--lgSpacer);
+}
+
+/* Overskrift */
+.sectionTitle {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: var(--smSpacer);
+
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+
+/* GRID Udvalgte opskrifter */
+.opskriftCards {
+    display: grid;
+
+    /* 4 kolonner*/
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--mdSpacer);
+
+    /* Selve cardet */
+    article {
+        box-shadow: var(--shadowCards);
+        cursor: pointer;
+        background-color: var(--white);
+    }
+
+    article:hover {
+
+
+        h3 {
+            text-decoration: underline;
+        }
+
+        transform: var(--scaleHover);
+    }
+
+    /* Card billede */
+
+    img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* Card info */
+    .cardInfo {
+        padding: var(--smSpacer);
+        display: flex;
+        flex-direction: column;
+        gap: var(--mdSpacer);
+
+
+
+        /* Titel + stjerne */
+        .cardTitle {
+            /* padding: var(--mdSpacer); */
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+
+
+        }
+    }
+
+
+}
+
+/* GRID Kategori sektion */
+.kategoriCards {
+
+    display: grid;
+
+    /* 7 kolonner*/
+    grid-template-columns: repeat(7, 1fr);
+    gap: var(--mdSpacer);
+
+    img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 50%;
+        box-shadow: var(--shadowCards);
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+
+        text-align: center;
+        cursor: pointer;
+    }
+
+    article:hover {
+
+
+        h3 {
+            text-decoration: underline;
+        }
+
+        transform: var(--scaleHover);
+    }
+
+}

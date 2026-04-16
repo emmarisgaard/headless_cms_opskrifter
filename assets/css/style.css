@@ -9,8 +9,8 @@ body {
 
 /* Global styling */
 
-/* Farver */
 :root {
+    /* Farver */
     --darkGreen: #33522A;
     --lightGreen: #b5d2ac;
     --grey: #f0f0f0;
@@ -18,14 +18,17 @@ body {
     --black: #000000;
     --white: #ffffff;
 
+    /* Effekter */
     --shadowCards: 4px 4px 8px var(--shadowGrey);
     --shadowButton: 2px 2px 2px var(--shadowGrey);
-    --transitionHover: background-color 0.3s ease, color 0.3s ease;
+    --transitionHover: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    --scaleHover: scale(1.05);
 
     background-color: var(--grey);
 
     main a {
-        color: var(--black)
+        color: var(--black);
+        text-decoration: none;
     }
 }
 
@@ -214,7 +217,7 @@ footer {
         }
 
         .nyhedsbrev-btn:hover {
-            transform: scale(1.05);
+            transform: var(--scaleHover);
             text-decoration: underline;
         }
     }
