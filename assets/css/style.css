@@ -5,3 +5,27 @@
 body {
     margin: 0;
 }
+
+/* Variable */
+
+/* Farver */
+:root {
+    --darkGreen: #33522A;
+    --lightGreen: #b5d2ac;
+    --grey: #f0f0f0;
+    --black: #000000;
+    --white: #ffffff;
+}
+
+
+/* Layout */
+:root {
+    --smSpacer: 10px;
+    --mdSpacer: 20px;
+    --lgSpacer: 40px;
+}
+
+/* Font */
+* {
+    font-family: 'Arial', sans-serif;
+}
