@@ -95,3 +95,56 @@ body {
 .hovedindhold {
     width: 100%;
 }
+
+
+/* SEKSION WRAPPER */
+.opskrift-sektion {
+    margin: var(--lgSpacer);
+}
+
+/* HEADER */
+.opskrift-sektion__header {
+    margin-bottom: var(--smSpacer);
+}
+
+/* GRID (3 kolonner + wrap) */
+.opskrift-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--mdSpacer);
+}
+
+/* CARD */
+.opskrift-kort {
+    background-color: var(--white);
+    box-shadow: var(--shadowCards);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.opskrift-kort:hover {
+    transform: var(--scaleHover);
+}
+
+/* BILLEDE */
+.opskrift-kort__billede {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+/* INDHOLD */
+.opskrift-kort__indhold {
+    padding: var(--smSpacer);
+    display: flex;
+    flex-direction: column;
+    gap: var(--mdSpacer);
+}
+
+/* TOP (titel + stjerne) */
+.opskrift-kort__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}

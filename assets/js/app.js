@@ -1,23 +1,4 @@
 
-// // JavaScript for dropdown menu
-
-// // Hent knappen og dropdown elementet
-// const OpskrifterBtnEl = document.getElementById("opskrifterBtn");
-// const dropdown = document.querySelector(".dropdown");
-
-// // Tilføj event listener til knappen for at toggle dropdown menuen. Når man trykker på opskrifter knappen, tilføjes eller fjernes class active på dropdown elementet, hvilket viser eller skjuler dropdown menuen.
-// OpskrifterBtnEl.addEventListener("click", function (e) {
-//     e.preventDefault();
-//     dropdown.classList.toggle("active");
-// });
-
-// // Luk dropdown hvis man klikker udenfor, ved at fjerne class active når klikket ikke er på dropdown elementet
-// document.addEventListener("click", function (e) {
-//     if (!dropdown.contains(e.target)) {
-//         dropdown.classList.remove("active");
-//     }
-// });
-
 
 // JavaScript for dropdown menu
 
