@@ -1,17 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>MadGlad | Forside</title>
+
 	<link rel="stylesheet" href="./assets/css/style.css" />
 	<link rel="stylesheet" href="./assets/css/forside.css" />
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+
+	<!-- JS -->
 	<script src="./assets/js/app.js" defer></script>
 </head>
 
 <body>
 
+	<!-- Navigation -->
+	<nav>
+		<ul>
+			<li class="logo"><a href="./index.html">MadGlad</a></li>
+
+			<!-- OPSKRIFTER -->
+			<li class="dropdown">
+				<a href="#" id="opskrifterBtn">
+					Opskrifter <i class="fa-solid fa-chevron-down"></i>
+				</a>
+
+				<ul class="dropdown-menu opskrifter-menu">
+					<li><a href="#">Alle opskrifter</a></li>
+					<li><a href="#">Morgenmad & Brunch</a></li>
+					<li><a href="#">Frokost & Madpakke</a></li>
+					<li><a href="#">Hovedretter / Aftensmad</a></li>
+					<li><a href="#">Brød</a></li>
+					<li><a href="#">Desserter</a></li>
+					<li><a href="#">Snacks & Småretter</a></li>
+					<li><a href="#">Drikke</a></li>
+				</ul>
+			</li>
+
+			<li><a href="./inspiration.html">Inspiration</a></li>
+		</ul>
+
+		<div class="dropdown">
+
+			<div class="search-box">
+				<input type="text" placeholder="Søg efter opskrifter..." />
+				<i class="fa-solid fa-magnifying-glass"></i>
+			</div>
+
+			<a href="#" id="minSideBtn">
+				<i class="fa-regular fa-user"></i> Min side
+				<i class="fa-solid fa-chevron-down"></i>
+			</a>
+
+			<ul class="dropdown-menu min-side-menu">
+				<li><a href="./favoritter.html"><i class="fa-solid fa-star"></i> Favoritter</a></li>
+				<li><a href="./madplan.html"><i class="fa-solid fa-calendar"></i> Madplan</a></li>
+				<li><a href="#"><i class="fa-solid fa-list"></i> Indkøbsliste</a></li>
+			</ul>
+		</div>
+	</nav>
+
+
+
+
+
+
+	<!-- FOOTER -->
 </body>
 
 </html>

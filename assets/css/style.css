@@ -6,7 +6,7 @@ body {
     margin: 0;
 }
 
-/* Variable */
+/* Global styling */
 
 /* Farver */
 :root {
@@ -15,6 +15,8 @@ body {
     --grey: #f0f0f0;
     --black: #000000;
     --white: #ffffff;
+
+    background-color: var(--grey);
 }
 
 
@@ -25,7 +27,144 @@ body {
     --lgSpacer: 40px;
 }
 
-/* Font */
+/* Font*/
 * {
     font-family: 'Arial', sans-serif;
+}
+
+
+
+
+/* Global navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--mdSpacer);
+    background-color: var(--darkGreen);
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+
+    * {
+        color: var(--white);
+    }
+
+    ul,
+    div {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: var(--mdSpacer);
+        margin: 0;
+        padding: 0;
+
+        a {
+            color: var(--white);
+            text-decoration: none;
+
+        }
+
+        a:hover {
+            color: var(--lightGreen);
+            transition: color 0.3s ease;
+
+        }
+
+        a i {
+            color: inherit;
+            /* https://www.w3schools.com/cssref/css_inherit.php */
+            /* Gør sådan at ikonerne også skifter farve samtidig med teksten */
+        }
+
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .fa-solid {
+            font-size: 0.75rem;
+        }
+
+        input {
+            padding: var(--smSpacer);
+            border: none;
+            border-radius: 20px;
+            width: 300px;
+        }
+
+    }
+
+
+    /* Dropdown */
+    .dropdown {
+        position: relative;
+    }
+
+
+    /* Skjul drowdown som standard */
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        background-color: var(--darkGreen);
+
+
+
+
+        li a {
+            display: block;
+            padding: 10px 15px;
+            color: var(--white);
+        }
+
+        li a:hover {
+            background-color: var(--lightGreen);
+            color: var(--black);
+
+        }
+    }
+
+
+    /* Aktiv dropdown*/
+    /* Når dropdown har class aktiv, så skal dropdown vises */
+    .dropdown.active .dropdown-menu {
+        display: block;
+    }
+}
+
+hr {
+    padding: 0;
+    margin: 0;
+}
+
+.opskrifter-menu {
+    min-width: 220px;
+}
+
+.min-side-menu {
+    right: 0;
+    left: auto;
+    min-width: none;
+}
+
+
+/* Søgefelt */
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    /* Iindsætter forstørrelsesglasset i søgefeltet */
+    i {
+        position: absolute;
+        right: 12px;
+        color: var(--black);
+    }
+
+    /* Input tekstfarve skal være sort */
+    input {
+        color: var(--black);
+    }
 }
