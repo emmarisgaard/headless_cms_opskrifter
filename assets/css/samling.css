@@ -14,6 +14,7 @@
     height: 50px;
     max-width: 1200px;
     margin: 0 auto;
+    width: calc(100% - 2 * var(--lgSpacer));
 }
 
 .logo {
@@ -90,6 +91,7 @@
     margin: var(--lgSpacer) auto;
     border-radius: 8px;
     max-width: 1200px;
+    width: calc(100% - 2 * var(--lgSpacer));
 }
 
 .collectionHeroInfo {
@@ -165,9 +167,10 @@
 
 /* ===== RECIPE SECTION ===== */
 .recipeSection {
-    padding: var(--lgSpacer);
+    padding: var(--lgSpacer) 0;
     max-width: 1200px;
     margin: 0 auto;
+    width: calc(100% - 2 * var(--lgSpacer));
 }
 
 .recipeSectionHeader {
@@ -248,7 +251,7 @@
 
 /* ===== MORE INSPIRATION ===== */
 .moreInspiration {
-    padding: var(--lgSpacer);
+    padding: var(--lgSpacer) 0;
     background-color: var(--grey);
 }
 
@@ -260,6 +263,7 @@
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    width: calc(100% - 2 * var(--lgSpacer));
 }
 
 .moreInspirationTitle {
@@ -356,6 +360,7 @@
 .newsletterContent {
     max-width: 1200px;
     margin: 0 auto;
+    width: calc(100% - 2 * var(--lgSpacer));
 }
 
 .newsletterContent h2 {

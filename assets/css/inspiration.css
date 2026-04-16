@@ -14,6 +14,7 @@
     height: 50px;
     max-width: 1200px;
     margin: 0 auto;
+    width: calc(100% - 2 * var(--lgSpacer));
 }
 
 .logo {
@@ -91,6 +92,7 @@
     position: relative;
     min-height: 300px;
     max-width: 1200px;
+    width: calc(100% - 2 * var(--lgSpacer));
 }
 
 .heroContent {
@@ -183,9 +185,10 @@
 
 /* ===== COLLECTIONS SECTION ===== */
 .collections {
-    padding: var(--lgSpacer);
+    padding: var(--lgSpacer) 0;
     max-width: 1200px;
     margin: 0 auto;
+    width: calc(100% - 2 * var(--lgSpacer));
 }
 
 .sectionTitle {
@@ -279,6 +282,7 @@
 .newsletterContent {
     max-width: 1200px;
     margin: 0 auto;
+    width: calc(100% - 2 * var(--lgSpacer));
 }
 
 .newsletterContent h2 {
@@ -343,6 +347,7 @@
     gap: var(--mdSpacer);
     max-width: 1200px;
     margin: 0 auto;
+    width: calc(100% - 2 * var(--lgSpacer));
 }
 
 .socialIcons a {
