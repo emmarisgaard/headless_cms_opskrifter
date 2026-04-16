@@ -91,40 +91,54 @@ body {
     /* https://www.w3schools.com/cssref/css4_pr_accent-color.php */
 }
 
+
 /* HØJRE SIDE */
 .hovedindhold {
     width: 100%;
 }
 
 
-/* SEKSION WRAPPER */
+/* SEKTION WRAPPER */
 .opskrift-sektion {
     margin: var(--lgSpacer);
 }
+
 
 /* HEADER */
 .opskrift-sektion__header {
     margin-bottom: var(--smSpacer);
 }
 
+
 /* GRID (3 kolonner + wrap) */
 .opskrift-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--mdSpacer);
+
+    /* sikrer at alle cards strækker sig ens i højden */
+    align-items: stretch;
 }
+
 
 /* CARD */
 .opskrift-kort {
+    display: flex;
+    flex-direction: column;
+
     background-color: var(--white);
     box-shadow: var(--shadowCards);
     cursor: pointer;
     transition: transform 0.3s ease;
+
+    /* gør at cardet fylder hele højden i grid */
+    height: 100%;
 }
 
 .opskrift-kort:hover {
     transform: var(--scaleHover);
 }
+
 
 /* BILLEDE */
 .opskrift-kort__billede {
@@ -134,17 +148,31 @@ body {
     display: block;
 }
 
+
 /* INDHOLD */
 .opskrift-kort__indhold {
     padding: var(--smSpacer);
+
     display: flex;
     flex-direction: column;
-    gap: var(--mdSpacer);
+
+    /* gør at indholdet kan strække sig og skubbe elementer ned */
+    flex: 1;
 }
+
 
 /* TOP (titel + stjerne) */
 .opskrift-kort__top {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+
+    /* minimum afstand mellem titel og tid */
+    margin-bottom: var(--smSpacer);
+}
+
+
+/* tid + sværhed placeres altid i bunden af cardet */
+.opskrift-kort__indhold p {
+    margin-top: auto;
 }
