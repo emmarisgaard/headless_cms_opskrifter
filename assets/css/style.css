@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    margin: 0;
 }
 
 body {
@@ -13,10 +14,19 @@ body {
     --darkGreen: #33522A;
     --lightGreen: #b5d2ac;
     --grey: #f0f0f0;
+    --shadowGrey: #888888;
     --black: #000000;
     --white: #ffffff;
 
+    --shadowCards: 4px 4px 8px var(--shadowGrey);
+    --shadowButton: 2px 2px 2px var(--shadowGrey);
+    --transitionHover: background-color 0.3s ease, color 0.3s ease;
+
     background-color: var(--grey);
+
+    main a {
+        color: var(--black)
+    }
 }
 
 
@@ -40,11 +50,12 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--mdSpacer);
+    padding: var(--mdSpacer) var(--lgSpacer);
     background-color: var(--darkGreen);
     z-index: 1000;
     position: sticky;
     top: 0;
+    box-shadow: 0 2px 10px var(--black);
 
     * {
         color: var(--white);
@@ -67,7 +78,7 @@ nav {
 
         a:hover {
             color: var(--lightGreen);
-            transition: color 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease;
 
         }
 
@@ -97,11 +108,10 @@ nav {
     }
 
 
-    /* Dropdown */
+    /* Dropdown styling */
     .dropdown {
         position: relative;
     }
-
 
     /* Skjul drowdown som standard */
     .dropdown-menu {
@@ -110,22 +120,27 @@ nav {
         top: 100%;
         background-color: var(--darkGreen);
 
+        /* Linje mellem punkter i drop downs */
+        .dropdown-divider {
+            height: 1px;
+            background-color: var(--white);
 
+        }
 
-
+        /* Dropdown-elementer */
         li a {
             display: block;
-            padding: 10px 15px;
+            padding: var(--smSpacer);
             color: var(--white);
         }
 
+        /* Hover-effekt for dropdown-elementer */
         li a:hover {
             background-color: var(--lightGreen);
             color: var(--black);
 
         }
     }
-
 
     /* Aktiv dropdown*/
     /* Når dropdown har class aktiv, så skal dropdown vises */
@@ -134,20 +149,18 @@ nav {
     }
 }
 
-hr {
-    padding: 0;
-    margin: 0;
-}
-
+/* Opskrift dropdown */
 .opskrifter-menu {
     min-width: 220px;
 }
 
+/* Min side dropdown */
 .min-side-menu {
     right: 0;
     left: auto;
     min-width: none;
 }
+
 
 
 /* Søgefelt */
@@ -156,7 +169,7 @@ hr {
     display: flex;
     align-items: center;
 
-    /* Iindsætter forstørrelsesglasset i søgefeltet */
+    /* Indsætter forstørrelsesglasset i højre side af søgefeltet */
     i {
         position: absolute;
         right: 12px;
@@ -166,5 +179,48 @@ hr {
     /* Input tekstfarve skal være sort */
     input {
         color: var(--black);
+    }
+}
+
+
+/* FOOTER */
+footer {
+    background-color: var(--darkGreen);
+    color: var(--white);
+    padding: var(--lgSpacer);
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+
+    .nyhedsbrev {
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        gap: var(--smSpacer);
+
+        input {
+            padding: var(--smSpacer);
+        }
+
+        .nyhedsbrev-btn {
+            background-color: var(--lightGreen);
+            width: 200px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            box-shadow: 2px 2px 4px var(--black);
+            cursor: pointer;
+        }
+
+        .nyhedsbrev-btn:hover {
+            transform: scale(1.05);
+            text-decoration: underline;
+        }
+    }
+
+    .socialMedia i {
+        color: var(--white);
+        font-size: 1.5rem;
     }
 }

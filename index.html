@@ -30,12 +30,19 @@
 
 				<ul class="dropdown-menu opskrifter-menu">
 					<li><a href="#">Alle opskrifter</a></li>
+					<div class="dropdown-divider"></div>
 					<li><a href="#">Morgenmad & Brunch</a></li>
+					<div class="dropdown-divider"></div>
 					<li><a href="#">Frokost & Madpakke</a></li>
+					<div class="dropdown-divider"></div>
 					<li><a href="#">Hovedretter / Aftensmad</a></li>
+					<div class="dropdown-divider"></div>
 					<li><a href="#">Brød</a></li>
+					<div class="dropdown-divider"></div>
 					<li><a href="#">Desserter</a></li>
+					<div class="dropdown-divider"></div>
 					<li><a href="#">Snacks & Småretter</a></li>
+					<div class="dropdown-divider"></div>
 					<li><a href="#">Drikke</a></li>
 				</ul>
 			</li>
@@ -57,18 +64,131 @@
 
 			<ul class="dropdown-menu min-side-menu">
 				<li><a href="./favoritter.html"><i class="fa-solid fa-star"></i> Favoritter</a></li>
+				<div class="dropdown-divider"></div>
 				<li><a href="./madplan.html"><i class="fa-solid fa-calendar"></i> Madplan</a></li>
+				<div class="dropdown-divider"></div>
 				<li><a href="#"><i class="fa-solid fa-list"></i> Indkøbsliste</a></li>
 			</ul>
 		</div>
 	</nav>
 
+	<!-- MAIN -->
+	<main>
+		<!-- Har brugt følgende til at lave hero-slider: https://www.w3schools.com/howto/howto_js_slideshow.asp -->
+
+		<section class="hero-slider">
+
+			<div class="slides">
+
+				<!-- Slide 1 -->
+				<div class="slide active">
+					<div class="text">
+						<h1>Velkommen til MadGlad</h1>
+						<p>Oplev nemme, lækre og inspirerende opskrifter til enhver lejlighed. Uanset om du leder efter
+							hurtig hverdagsmad eller noget særligt til weekenden, hjælper MadGlad dig godt i gang i
+							køkkenet.</p>
+						<p>
+							Her finder du opskrifter, der tager hensyn til både tid, smag og hele familien – så det
+							bliver lidt lettere at få god mad på bordet hver dag.
+						</p>
+						<div class="slider-buttons">
+							<a href="./opskrifter.html">Se opskrifter</a>
+							<a href="./inspiration.html">Få inspiration</a>
+						</div>
+					</div>
+
+					<div class="image">
+						<img src="./assets/img/spiral-vegetable-tart.webp" />
+					</div>
+				</div>
+
+				<!-- Slide 2 -->
+				<div class="slide">
+					<div class="text">
+						<p class="ugeInsp"><i class="fa-solid fa-circle"></i> UGENS INSPIRATION</p>
+						<h1>Forårs Grillaften</h1>
+						<p>Når foråret melder sin ankomst, rykker vi udenfor og tænder grillen.
+							Denne opskriftssamling
+							er fyldt med enkle og smagfulde retter, der passer perfekt til lyse aftener og godt selskab.
+						</p>
+						<p>
+
+							Her er fokus på friske råvarer, hurtige tilberedninger og masser af smag, lige til at nyde i
+							den friske forårsluft.</p>
+						<div class="slider-buttons">
+							<a href="./opskrifter.html">Se hele samlingen</a>
+							<a href="./inspiration.html">+ Føj til madplan</a>
+						</div>
+					</div>
+					<div class="image">
+						<img src="./assets/img/greek-salad.webp" />
+					</div>
+				</div>
+
+				<!-- Slide 3 -->
+				<div class="slide">
+					<div class="text">
+						<p class="ugeInsp"><i class="fa-solid fa-circle"></i> UGENS INSPIRATION</p>
+						<h1>Skjulte Grøntsager</h1>
+						<p>Har du børn, der ikke er vilde med grøntsager? I denne samling har vi gjort det nemt at snige
+							de gode ting ind i maden uden brok.
+						</p>
+						<p>
+
+							Her finder du lækre retter som gulerodspasta og cremet grøntsagssuppe, hvor smagen er i
+							fokus – og grøntsagerne glider ubemærket med.</p>
+						<div class="slider-buttons">
+							<a href="./opskrifter.html">Se hele samlingen</a>
+							<a href="./inspiration.html">+ Føj til madplan</a>
+						</div>
+					</div>
+					<div class="image">
+						<img src="./assets/img/ultimate-veggie-burgers.webp" />
+					</div>
+				</div>
+
+			</div>
+
+			<!-- Slider knapper -->
+
+			<button class="prev" onclick="plusSlides(-1)">‹</button>
+			<button class="next" onclick="plusSlides(1)">›</button>
+			<!-- Har brugt følgende til at lave hero-slider: https://www.w3schools.com/howto/howto_js_slideshow.asp -->
+		</section>
+
+		<section class="udvalgteOpskrifter"></section>
+
+	</main>
 
 
 
 
 
 	<!-- FOOTER -->
+	<footer>
+		<section class="nyhedsbrev">
+
+			<h2>Tilmeld dig vores nyhedsbrev!</h2>
+			<p>Få nem inspiration til hverdagsmad for hele familien.Vi deler lækre
+				opskrifter, smarte madtips og idéer til at gøre måltiderne både sundere og sjovere.
+			</p>
+			<p>
+				Få nye opskrifter direkte i din indbakke – klar til travle hverdage og hyggelige weekender.</p>
+
+
+			<input type="email" name="email" class="nyhedsbrev-email" placeholder="Indtast din email adresse..."
+				required>
+			<input type="button" value="Tilmeld nyhedsbrev" class="nyhedsbrev-btn">
+
+		</section>
+		<section class="socialMedia">
+			<a href="#"><i class="fa-brands fa-facebook"></i></a>
+			<a href="#"><i class="fa-brands fa-instagram"></i></a>
+			<a href="#"><i class="fa-brands fa-youtube"></i></a>
+		</section>
+	</footer>
+
+
 </body>
 
 </html>
