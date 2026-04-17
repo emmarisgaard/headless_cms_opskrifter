@@ -1,16 +1,14 @@
-// Base URL til dit WordPress API
+//Henter opskrifter fra WordPress REST API og viser dem som kort på siden
+
+//Henter api
 const baseUrl = "https://tester.emmarisgaard.dk/wp-json/wp/v2/posts";
 
 
-// ----------------------
-// START: Hent opskrifter når siden loader
-// ----------------------
+
+// Hent opskrifter når siden loader
 getAllRecipes();
 
-
-// ----------------------
-// MAPPING (ID → tekst)
-// ----------------------
+//Definerer sværhedsgrad ud fra deres ID i wordpress
 const difficultyMap = {
     46: "Begynder",
     47: "Mellem",
@@ -18,9 +16,7 @@ const difficultyMap = {
 };
 
 
-// ----------------------
-// HENT KUN OPSKRIFTER (kategori ID = 57)
-// ----------------------
+//Funktion til at hente alle opskrifter - opskrifter har id 57 i wordpress, derfor tilføjes &categories=57 i url'en for at filtrere på det
 async function getAllRecipes() {
 
     try {
@@ -30,7 +26,7 @@ async function getAllRecipes() {
 
         const posts = await response.json();
 
-        console.log("Hentede opskrifter:", posts);
+        console.log("Opskrifter:", posts); //Logger opskrifterne for at vi kan se dem i consollen.
 
         renderRecipes(posts);
 
@@ -40,17 +36,16 @@ async function getAllRecipes() {
 }
 
 
-// ----------------------
-// RENDER OPSKRIFTER SOM CARDS
-// ----------------------
+// Funktion til at vise opskrifterne på siden
 function renderRecipes(posts) {
 
-    const container = document.querySelector(".opskrift-grid");
-    container.innerHTML = "";
+    const container = document.querySelector(".opskrift-grid"); //Finder containeren på siden hvor opskrifterne skal vises
+    container.innerHTML = ""; //Tømmer containeren for indhold
 
-    posts.forEach(post => {
+    posts.forEach(post => { //for each loop der kører igennem hver opskrift i posts og tilføjer HTML til containeren for hver opskrift. HTML'en er et card der viser opskriftens billede, titel, tid og sværhedsgrad.
 
-        // Finder difficulty via mapping (fra taxonomy ID)
+        // Finder difficulty via mapping (fra taxonomy ID), så vi kan se sværhedsgraden på siden og ikke bare ID'et.
+        //Vi har fået hjælp af chat.gpt til at lave denne mapping, da sværhedsgraden i wordpress er lavet som en taxonomy, og derfor kun viser et ID i API'et. Med denne mapping kan vi vise selve sværhedsgraden på siden i stedet for ID'et.
         const difficultyId = post["dificulty-level"]?.[0];
         const difficulty = difficultyMap[difficultyId] || "";
 
@@ -73,7 +68,7 @@ function renderRecipes(posts) {
 
                 <!-- Tid + sværhed -->
                 <p>
-                    <i class="fa-solid fa-stopwatch"></i>
+                    <i class="fa-regular fa-clock"></i>
                     ${post.acf.total_time} ${difficulty ? "| " + difficulty : ""}
                 </p>
 

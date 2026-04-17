@@ -1,0 +1,230 @@
+/* Hero styling */
+.heroLayout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--mdSpacer);
+    margin: var(--lgSpacer);
+    background-color: var(--white);
+
+    .hero-billede img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .heroTekst {
+        padding: var(--mdSpacer);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-width: 0;
+
+        .heroSamling {
+            a {
+                color: var(--black);
+            }
+        }
+
+    }
+
+    .heroIkoner {
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            color: var(--black);
+            text-decoration: none;
+
+            padding: 5px;
+        }
+
+        a:hover {
+
+            background-color: var(--lightGreen);
+            transition: var(--transitionHover);
+        }
+    }
+
+    span {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: var(--smSpacer);
+    }
+
+}
+
+/* MAIN styling */
+
+.mainLayout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--mdSpacer);
+    margin: var(--lgSpacer);
+
+    .ingredienser,
+    .fremgangsmaade {
+        padding: var(--mdSpacer);
+        display: flex;
+        flex-direction: column;
+        gap: var(--mdSpacer);
+        justify-content: space-between;
+        min-width: 0;
+
+    }
+
+    .ingredienser {
+        background-color: var(--darkGreen);
+        color: var(--white);
+
+        button {
+            background-color: var(--lightGreen);
+            display: flex;
+            justify-content: space-between;
+            padding: var(--mdSpacer);
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 2px 2px 4px var(--black);
+
+        }
+
+        button.tilføj:hover {
+            transform: var(--scaleHover);
+            transition: var(--transitionHover);
+
+            span {
+                text-decoration: underline;
+                transition: var(--transitionHover);
+            }
+        }
+
+        button.antal {
+            justify-content: space-between;
+        }
+
+        button.tilføj {
+
+            gap: var(--smSpacer);
+
+            align-self: flex-start;
+        }
+
+    }
+
+    .fremgangsmaade {
+        background-color: var(--white);
+
+        input[type="checkbox"] {
+            accent-color: var(--darkGreen);
+            /* https://www.w3schools.com/cssref/css4_pr_accent-color.php */
+        }
+
+        .checkbox-container {
+            font-weight: bold;
+        }
+
+
+        .kilde {
+            color: var(--shadowGrey);
+            margin-top: var(--smSpacer);
+        }
+    }
+
+
+    ul,
+    ol {
+        padding-left: var(--mdSpacer);
+
+        li {
+            padding: var(--smSpacer);
+
+
+        }
+    }
+
+
+}
+
+/* Mere inspiration og anbefalede opskrifter */
+.mereInsp,
+.anbefalede {
+    margin: var(--lgSpacer);
+
+    a {
+        text-decoration: none;
+        color: var(--black);
+    }
+}
+
+/* Overskrift */
+.sectionTitle {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: var(--smSpacer);
+
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+
+/* GRID Udvalgte opskrifter */
+.opskriftCards {
+    display: grid;
+
+    /* 4 kolonner*/
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--mdSpacer);
+
+    /* Selve cardet */
+    article {
+        box-shadow: var(--shadowCards);
+        cursor: pointer;
+        background-color: var(--white);
+    }
+
+    article:hover {
+
+
+        h3 {
+            text-decoration: underline;
+        }
+
+        transform: var(--scaleHover);
+    }
+
+    /* Card billede */
+
+    img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* Card info */
+    .cardInfo {
+        padding: var(--smSpacer);
+        display: flex;
+        flex-direction: column;
+        gap: var(--mdSpacer);
+
+
+
+        /* Titel + stjerne */
+        .cardTitle {
+            /* padding: var(--mdSpacer); */
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+
+
+        }
+    }
+
+
+}
