@@ -44,15 +44,16 @@
             background-color: var(--lightGreen);
             transition: var(--transitionHover);
         }
+
+        span {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: var(--smSpacer);
+        }
     }
 
-    span {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: var(--smSpacer);
-    }
 
 }
 
@@ -70,7 +71,6 @@
         display: flex;
         flex-direction: column;
         gap: var(--mdSpacer);
-        justify-content: space-between;
         min-width: 0;
 
     }

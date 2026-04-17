@@ -8,12 +8,6 @@ const baseUrl = "https://tester.emmarisgaard.dk/wp-json/wp/v2/posts";
 // Hent opskrifter når siden loader
 getAllRecipes();
 
-//Definerer sværhedsgrad ud fra deres ID i wordpress
-const difficultyMap = {
-    46: "Begynder",
-    47: "Mellem",
-    48: "Avanceret"
-};
 
 
 //Funktion til at hente alle opskrifter - opskrifter har id 57 i wordpress, derfor tilføjes &categories=57 i url'en for at filtrere på det
@@ -44,13 +38,9 @@ function renderRecipes(posts) {
 
     posts.forEach(post => { //for each loop der kører igennem hver opskrift i posts og tilføjer HTML til containeren for hver opskrift. HTML'en er et card der viser opskriftens billede, titel, tid og sværhedsgrad.
 
-        // Finder difficulty via mapping (fra taxonomy ID), så vi kan se sværhedsgraden på siden og ikke bare ID'et.
-        //Vi har fået hjælp af chat.gpt til at lave denne mapping, da sværhedsgraden i wordpress er lavet som en taxonomy, og derfor kun viser et ID i API'et. Med denne mapping kan vi vise selve sværhedsgraden på siden i stedet for ID'et.
-        const difficultyId = post["dificulty-level"]?.[0];
-        const difficulty = difficultyMap[difficultyId] || "";
 
         container.innerHTML += `
-        <article class="opskrift-kort">
+        <article class="opskrift-kort" data-id="${post.id}">
 
             <!-- Billede -->
             <img class="opskrift-kort__billede" 
@@ -69,12 +59,23 @@ function renderRecipes(posts) {
                 <!-- Tid + sværhed -->
                 <p>
                     <i class="fa-regular fa-clock"></i>
-                    ${post.acf.total_time} ${difficulty ? "| " + difficulty : ""}
+                    ${post.acf.total_time} | ${post.acf?.difficulty?.[0]?.name}
                 </p>
 
             </div>
 
         </article>
         `;
+    });
+    // Gør hvert card klikbart og sender brugeren til single opskrift side
+    const cards = document.querySelectorAll(".opskrift-kort");
+
+    cards.forEach(card => {
+        card.addEventListener("click", () => {
+            const id = card.dataset.id;
+
+            // sender id med i URL
+            window.location.href = `opskrift.html?id=${id}`;
+        });
     });
 }
