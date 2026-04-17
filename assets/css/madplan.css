@@ -1,0 +1,251 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0 40px;
+    background-color: #f0f0f0;
+}
+
+/* Variabler */
+:root {
+    --darkGreen: #33522A;
+    --lightGreen: #b5d2ac;
+    --grey: #f0f0f0;
+    --white: #ffffff;
+
+    --smSpacer: 10px;
+    --mdSpacer: 20px;
+    --lgSpacer: 40px;
+}
+
+/* Typography */
+p {
+    font-size: 16px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* MADPLAN SIDE */
+
+/* uge oversigt*/
+
+.uge-header {
+    display: flex;
+    align-items: center;
+}
+
+.uge-header button {
+    background-color: var(--lightGreen);
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    margin-left: var(--mdSpacer);
+}
+
+.uge-header button:hover {
+    background-color: var(--darkGreen);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.add {
+    background: var(--white);
+    padding: var(--smSpacer);
+    border-radius: 5px;
+    border: 1px dashed grey;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Week grid */
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: var(--smSpacer);
+}
+
+/* Uge Cards */
+.day-card,
+.onsdag-card {
+    background: var(--white);
+    padding: var(--smSpacer);
+    border-radius: 5px;
+    border: 1px solid grey;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+}
+
+.onsdag-card {
+    background: var(--lightGreen);
+}
+
+.day-card h3,
+.onsdag-card h3 {
+    margin: 0 0 var(--smSpacer) 0;
+    color: var(--darkGreen);
+}
+
+.onsdag-card h3 {
+    color: black;
+}
+
+.day-number {
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Mad på uge cards */
+.food-list {
+    margin-top: var(--smSpacer);
+    display: flex;
+    flex-direction: column;
+    gap: var(--smSpacer);
+}
+
+.mp-food {
+    margin: 0;
+    background: var(--lightGreen);
+    padding: var(--smSpacer);
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+
+.onsdag-card .mp-food {
+    background: var(--darkGreen);
+    color: white;
+}
+
+.time {
+    margin-top: auto;
+    font-size: 14px;
+    color: rgb(72, 72, 72);
+}
+
+/* Opskrifter */
+
+.opskrift-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--mdSpacer);
+}
+
+.recipe-card {
+    display: flex;
+    gap: var(--mdSpacer);
+    background: var(--white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 200px;
+
+    padding: 0;
+    overflow: hidden;
+    /* 👈 vigtigt for kant-til-kant billede */
+}
+
+/* billede */
+.recipe-card img {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* content */
+.recipe-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    padding: var(--smSpacer);
+}
+
+.recipe-top {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.recipe-name {
+    margin: 0;
+}
+
+.recipe-time {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.recipe-actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--smSpacer);
+}
+
+.mp-button {
+    border: 1px solid var(--darkGreen);
+    background: var(--lightGreen);
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.mp-button:hover {
+    background: var(--darkGreen);
+    color: white;
+}
+
+/* anbefalede opskrifter */
+
+.anbefalede-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--mdSpacer);
+}
+
+.anb-card {
+    background: var(--white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    padding: 0;
+    overflow: hidden;
+    /* 👈 vigtigt */
+}
+
+/* billede */
+.anb-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+/* tekst */
+.anb-card h3,
+.anb-card p {
+    padding: 0 var(--smSpacer);
+}
+
+/* spacing */
+.mp-h2 {
+    padding: var(--lgSpacer) 0 var(--mdSpacer) 0;
+}
+
+/* MADPLAN SIDE SLUT */

@@ -5,12 +5,191 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>MadGlad | Favoritter</title>
+
 	<link rel="stylesheet" href="./assets/css/style.css" />
 	<link rel="stylesheet" href="./assets/css/favoritter.css" />
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 	<script src="./assets/js/app.js" defer></script>
 </head>
 
 <body>
+
+	<main class="favoritter-page">
+
+		<!-- ───────── SIDEBAR ───────── -->
+		<aside class="sidebar">
+			<h2>Mine favorit samlinger</h2>
+
+			<div class="samling-list">
+
+				<div class="samling-card">
+					<img src="./assets/img/pasta-primavera.webp" alt="Pasta primavera" />
+					<div class="samling-info">
+						<h3>Alle favoritter</h3>
+						<p>32 opskrifter</p>
+					</div>
+				</div>
+
+				<div class="samling-card active">
+					<img src="./assets/img/greek-salad.webp" alt="Græsk salat" />
+					<div class="samling-info">
+						<h3>Forårs retter</h3>
+						<p>12 opskrifter</p>
+						<p>Oprettet af MadGlad</p>
+					</div>
+				</div>
+
+				<div class="samling-card">
+					<img src="./assets/img/low-carb-oatmeal-pancakes.webp" alt="Pandekager" />
+					<div class="samling-info">
+						<h3>Til Carlo's fødselsdag</h3>
+						<p>8 opskrifter</p>
+						<p>Oprettet af dig</p>
+					</div>
+				</div>
+
+				<div class="samling-card">
+					<img src="./assets/img/beef-stroganoff.webp" alt="Bøf stroganoff" />
+					<div class="samling-info">
+						<h3>Nem aften</h3>
+						<p>5 opskrifter</p>
+						<p>Oprettet af dig</p>
+					</div>
+				</div>
+
+				<div class="samling-card">
+					<img src="./assets/img/baked-spinach-ziti.webp" alt="Bagt pasta med spinat" />
+					<div class="samling-info">
+						<h3>Lidt opvask</h3>
+						<p>5 opskrifter</p>
+						<p>Oprettet af dig</p>
+					</div>
+				</div>
+
+				<div class="ny-samling">
+					<i class="fa-solid fa-plus"></i> Ny samling
+				</div>
+
+			</div>
+		</aside>
+
+		<!-- favoritter -->
+		<section class="main-content">
+
+			<div class="favorit-header">
+				<i class="fa-solid fa-star"></i>
+				<h2>Mine favoritter</h2>
+			</div>
+
+			<p class="samling-meta">
+				Forårs retter | 12 opskrifter | Oprettet af MadGlad
+			</p>
+
+
+			<div class="favorit-grid">
+
+				<article class="fav-card">
+					<img class="fav-card-img" src="./assets/img/stove-top-burgers.webp" alt="Burger">
+					<div class="fav-card-body">
+
+						<div class="fav-card-top">
+							<h3>Burger</h3>
+							<i class="fa-solid fa-star fav-star"></i>
+						</div>
+
+						<p class="fav-card-time"><i class="fa-regular fa-clock"></i> 1 time 30 min | Begynder</p>
+
+						<div class="fav-card-actions">
+							<button class="fav-btn">+ Føj til madplan</button>
+							<button class="fav-btn">+ Føj til indkøb</button>
+						</div>
+
+					</div>
+				</article>
+
+				<article class="fav-card">
+					<img class="fav-card-img" src="./assets/img/fluffy-burger-buns.webp" alt="Burger boller">
+					<div class="fav-card-body">
+						<div class="fav-card-top">
+							<h3>Burger boller</h3>
+							<i class="fa-solid fa-star fav-star"></i>
+						</div>
+						<p class="fav-card-time"><i class="fa-regular fa-clock"></i> 1 time 30 min | Begynder</p>
+						<div class="fav-card-actions">
+							<button class="fav-btn">+ Føj til madplan</button>
+							<button class="fav-btn">+ Føj til indkøb</button>
+						</div>
+					</div>
+				</article>
+
+				<article class="fav-card">
+					<img class="fav-card-img" src="./assets/img/greek-salad.webp" alt="Græsk salat">
+					<div class="fav-card-body">
+						<div class="fav-card-top">
+							<h3>Græsk salat</h3>
+							<i class="fa-solid fa-star fav-star"></i>
+						</div>
+						<p class="fav-card-time"><i class="fa-regular fa-clock"></i> 1 time 30 min | Begynder</p>
+						<div class="fav-card-actions">
+							<button class="fav-btn">+ Føj til madplan</button>
+							<button class="fav-btn">+ Føj til indkøb</button>
+						</div>
+					</div>
+				</article>
+
+				<article class="fav-card">
+					<img class="fav-card-img" src="./assets/img/roasted-root-vegetables.webp" alt="Bagte rodfrugter">
+					<div class="fav-card-body">
+						<div class="fav-card-top">
+							<h3>Bagte rodfrugter</h3>
+							<i class="fa-solid fa-star fav-star"></i>
+						</div>
+						<p class="fav-card-time"><i class="fa-regular fa-clock"></i> 1 time 30 min | Begynder</p>
+						<div class="fav-card-actions">
+							<button class="fav-btn">+ Føj til madplan</button>
+							<button class="fav-btn">+ Føj til indkøb</button>
+						</div>
+					</div>
+				</article>
+
+				<article class="fav-card">
+					<img class="fav-card-img" src="./assets/img/sweet-potato-fries.webp" alt="Sweet potato fries">
+					<div class="fav-card-body">
+						<div class="fav-card-top">
+							<h3>Sweet potato fries</h3>
+							<i class="fa-solid fa-star fav-star"></i>
+						</div>
+						<p class="fav-card-time"><i class="fa-regular fa-clock"></i> 1 time 30 min | Begynder</p>
+						<div class="fav-card-actions">
+							<button class="fav-btn">+ Føj til madplan</button>
+							<button class="fav-btn">+ Føj til indkøb</button>
+						</div>
+					</div>
+				</article>
+
+				<article class="fav-card">
+					<img class="fav-card-img" src="./assets/img/potato-salad.webp" alt="Kartoffel salat">
+					<div class="fav-card-body">
+						<div class="fav-card-top">
+							<h3>Kartoffel salat</h3>
+							<i class="fa-solid fa-star fav-star"></i>
+						</div>
+						<p class="fav-card-time"><i class="fa-regular fa-clock"></i> 1 time 30 min | Begynder</p>
+						<div class="fav-card-actions">
+							<button class="fav-btn">+ Føj til madplan</button>
+							<button class="fav-btn">+ Føj til indkøb</button>
+						</div>
+					</div>
+				</article>
+
+			</div>
+
+
+		</section>
+
+	</main>
 
 </body>
 
