@@ -1,0 +1,439 @@
+/* ===== HEADER ===== */
+.header {
+    background-color: var(--darkGreen);
+    padding: 0 var(--lgSpacer);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.headerNav {
+    display: flex;
+    align-items: center;
+    gap: var(--mdSpacer);
+    height: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: calc(100% - 2 * var(--lgSpacer));
+}
+
+.logo {
+    color: var(--white);
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-decoration: none;
+    margin-right: var(--mdSpacer);
+}
+
+.navLinks {
+    list-style: none;
+    display: flex;
+    gap: var(--mdSpacer);
+    margin: 0;
+    padding: 0;
+}
+
+.navLinks a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.navActive {
+    text-decoration: underline !important;
+}
+
+.searchBar {
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 4px;
+    padding: 4px 10px;
+    margin-left: auto;
+    width: 220px;
+}
+
+.searchBar input {
+    border: none;
+    outline: none;
+    font-size: 0.85rem;
+    width: 100%;
+    background: transparent;
+}
+
+.searchIcon {
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.userMenu {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--white);
+}
+
+.userMenu a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.userIcon {
+    font-size: 1rem;
+}
+
+/* ===== COLLECTION HERO ===== */
+.collectionHero {
+    display: flex;
+    align-items: stretch;
+    background-color: var(--white);
+    margin: var(--lgSpacer) auto;
+    border-radius: 8px;
+    max-width: 1200px;
+    width: calc(100% - 2 * var(--lgSpacer));
+}
+
+.collectionHeroInfo {
+    flex: 1;
+    padding: var(--lgSpacer);
+    max-width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.collectionTitle {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--black);
+    margin: 0 0 4px 0;
+}
+
+.collectionCount {
+    font-size: 0.85rem;
+    color: #555;
+    display: block;
+    margin-bottom: var(--smSpacer);
+}
+
+.collectionDesc {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #333;
+    margin: 0 0 var(--smSpacer) 0;
+}
+
+.collectionHeroImage {
+    flex: 1;
+    max-width: 55%;
+}
+
+.collectionHeroImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+/* ===== ACTION BUTTONS ===== */
+.actionButtons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    padding-top: var(--mdSpacer);
+}
+
+.actionBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    text-align: center;
+    flex: 1;
+}
+
+.actionIcon {
+    font-size: 1.2rem;
+    color: var(--black);
+}
+
+.actionLabel {
+    font-size: 0.65rem;
+    color: var(--black);
+    line-height: 1.2;
+}
+
+/* ===== RECIPE SECTION ===== */
+.recipeSection {
+    padding: var(--lgSpacer) 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: calc(100% - 2 * var(--lgSpacer));
+}
+
+.recipeSectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--mdSpacer);
+}
+
+.recipeSectionTitle {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--black);
+    margin: 0;
+}
+
+.sortDropdown {
+    background-color: var(--darkGreen);
+    color: var(--white);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.recipeGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--mdSpacer);
+}
+
+.recipeCard {
+    background-color: var(--white);
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.recipeCardImage {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+}
+
+.recipeCardImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.recipeCardBody {
+    padding: var(--mdSpacer);
+}
+
+.recipeCardTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: 8px;
+}
+
+.favoriteStar {
+    font-size: 1.25rem;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-left: 8px;
+}
+
+.recipeMeta {
+    font-size: 0.85rem;
+    color: var(--black);
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+/* ===== MORE INSPIRATION ===== */
+.moreInspiration {
+    padding: var(--lgSpacer) 0;
+    background-color: var(--grey);
+}
+
+.moreInspirationHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--mdSpacer);
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(100% - 2 * var(--lgSpacer));
+}
+
+.moreInspirationTitle {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--black);
+    margin: 0;
+}
+
+.seeAllLink {
+    font-size: 0.85rem;
+    color: var(--black);
+    text-decoration: none;
+}
+
+.seeAllLink:hover {
+    text-decoration: underline;
+}
+
+.moreInspirationGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--mdSpacer);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.inspirationCard {
+    background-color: var(--white);
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.inspirationCardImage {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.inspirationCardImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.inspirationCardBody {
+    padding: var(--mdSpacer);
+    display: flex;
+    flex-direction: column;
+}
+
+.inspirationCardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 6px;
+}
+
+.inspirationCardHeader h3 {
+    font-size: 1.05rem;
+    margin: 0;
+    font-weight: 700;
+    color: var(--black);
+}
+
+.recipeCount {
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: #555;
+}
+
+.inspirationCardBody p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: var(--smSpacer);
+    color: #333;
+}
+
+.cardArrow {
+    text-align: right;
+    font-size: 1.2rem;
+    color: var(--black);
+    margin-top: auto;
+}
+
+/* ===== NEWSLETTER ===== */
+.newsletter {
+    background-color: var(--darkGreen);
+    color: var(--white);
+    padding: var(--lgSpacer);
+}
+
+.newsletterContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: calc(100% - 2 * var(--lgSpacer));
+}
+
+.newsletterContent h2 {
+    font-size: 1.3rem;
+    margin: 0 0 var(--smSpacer) 0;
+}
+
+.newsletterContent p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin: 0 0 6px 0;
+}
+
+.newsletterForm {
+    margin-top: var(--mdSpacer);
+    display: flex;
+    flex-direction: column;
+    gap: var(--smSpacer);
+    max-width: 320px;
+}
+
+.newsletterForm input {
+    padding: 10px 12px;
+    border: none;
+    border-radius: 4px;
+    background: var(--white);
+    color: var(--darkGreen);
+    font-size: 0.85rem;
+    outline: none;
+}
+
+.newsletterForm input::placeholder {
+    color: #555;
+}
+
+.newsletterBtn {
+    padding: 10px 20px;
+    background-color: var(--lightGreen);
+    color: var(--black);
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.newsletterBtn:hover {
+    opacity: 0.85;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background-color: var(--darkGreen);
+    padding: var(--mdSpacer) var(--lgSpacer);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--mdSpacer);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.socialIcons a {
+    color: var(--white);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.socialIcons a:hover {
+    opacity: 0.8;
+}
