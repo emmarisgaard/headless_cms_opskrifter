@@ -84,6 +84,11 @@
 }
 
 /* ===== HERO SECTION ===== */
+a {
+    text-decoration: none;
+    color: var(--black);
+}
+
 .hero {
     background-color: var(--white);
     display: flex;
@@ -183,12 +188,9 @@
     background-color: var(--darkGreen);
 }
 
-/* ===== COLLECTIONS SECTION ===== */
+/* ===== SAMLINGER ===== */
 .collections {
-    padding: var(--lgSpacer) 0;
-    max-width: 1200px;
-    margin: 0 auto;
-    width: calc(100% - 2 * var(--lgSpacer));
+    margin: var(--lgSpacer);
 }
 
 .sectionTitle {
@@ -210,6 +212,12 @@
     overflow: hidden;
     background-color: var(--white);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.collectionCard:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .collectionCardImage {
