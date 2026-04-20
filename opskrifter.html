@@ -25,22 +25,23 @@
 					Opskrifter <i class="fa-solid fa-chevron-down"></i>
 				</a>
 
+				<!-- Drowdown menu med vores valgte kategorier og det id de har i wordpress, så vi kan lytte efter click og hente de rigtige opskrifter -->
 				<ul class="dropdown-menu opskrifter-menu">
-					<li><a href="#">Alle opskrifter</a></li>
+					<li><a href="../opskrifter.html?category=57">Alle opskrifter</a></li>
 					<div class="dropdown-divider"></div>
-					<li><a href="#">Morgenmad & Brunch</a></li>
+					<li><a href="../opskrifter.html?category=58">Morgenmad & Brunch</a></li>
 					<div class="dropdown-divider"></div>
-					<li><a href="#">Frokost & Madpakke</a></li>
+					<li><a href="../opskrifter.html?category=59">Frokost & Madpakke</a></li>
 					<div class="dropdown-divider"></div>
-					<li><a href="#">Hovedretter / Aftensmad</a></li>
+					<li><a href="../opskrifter.html?category=60">Hovedretter / Aftensmad</a></li>
 					<div class="dropdown-divider"></div>
-					<li><a href="#">Desserter</a></li>
+					<li><a href="../opskrifter.html?category=63">Desserter</a></li>
 					<div class="dropdown-divider"></div>
-					<li><a href="#">Snacks & Småretter</a></li>
+					<li><a href="../opskrifter.html?category=61">Snacks & Småretter</a></li>
 					<div class="dropdown-divider"></div>
-					<li><a href="#">Brød</a></li>
+					<li><a href="../opskrifter.html?category=62">Brød</a></li>
 					<div class="dropdown-divider"></div>
-					<li><a href="#">Drikke</a></li>
+					<li><a href="../opskrifter.html?category=64">Drikke</a></li>
 				</ul>
 			</li>
 
@@ -81,8 +82,7 @@
 
 					<section class="filter-accordion">
 
-						<!-- PARENT -->
-						<div class="filter-sektion parent">
+						<div class="filter-sektion">
 							<input type="checkbox" id="filterMain" class="filter-toggle">
 
 							<label for="filterMain">
@@ -100,11 +100,14 @@
 									</label>
 
 									<div class="filter-indhold">
-										<label><input type="checkbox"> Morgenmad</label>
-										<label><input type="checkbox"> Frokost</label>
-										<label><input type="checkbox"> Aftensmad</label>
-										<label><input type="checkbox"> Snacks</label>
-										<label><input type="checkbox"> Dessert</label>
+										<label><input type="checkbox"> Morgenmad & Brunch</label>
+										<label><input type="checkbox"> Frokost & Madpakker</label>
+										<label><input type="checkbox"> Hovedretter / Aftensmad</label>
+										<label><input type="checkbox"> Desserter</label>
+										<label><input type="checkbox"> Snacks & Småretter</label>
+										<label><input type="checkbox"> Brød</label>
+										<label><input type="checkbox"> Drikke</label>
+
 									</div>
 								</div>
 
@@ -117,11 +120,23 @@
 									</label>
 
 									<div class="filter-indhold">
-										<label><input type="checkbox"> Under 15 min</label>
-										<label><input type="checkbox"> 15–30 min</label>
-										<label><input type="checkbox"> 30–60 min</label>
-										<label><input type="checkbox"> Over 1 time</label>
-										<label><input type="checkbox"> Meal prep</label>
+										<label><input type="checkbox">Under 30 min</label>
+										<label><input type="checkbox">30-60 min</label>
+										<label><input type="checkbox">Over 1 time</label>
+									</div>
+								</div>
+								<!-- TID -->
+								<div class="filter-sektion">
+									<input type="checkbox" id="filter-difficulty" class="filter-toggle">
+
+									<label for="filter-difficulty">
+										Sværhedsgrad <i class="fa-solid fa-angle-down"></i>
+									</label>
+
+									<div class="filter-indhold">
+										<label><input type="checkbox">Begynder</label>
+										<label><input type="checkbox">Mellem</label>
+										<label><input type="checkbox">Avanceret</label>
 									</div>
 								</div>
 
