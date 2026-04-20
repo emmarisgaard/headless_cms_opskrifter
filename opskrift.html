@@ -68,218 +68,135 @@
 			</ul>
 		</div>
 	</nav>
+
+	<!-- Opskrift data hentes fra api og indsættes i denne div -->
 	<div class="opskrift-container"></div>
-	<!-- MAIN -->
 
-	<!-- Hero / intro -->
-
-	<!-- <section class="heroLayout">
-		<div class="heroTekst">
-			<h1>Ultimativ veggie burger</h1>
-			<p><i class="fa-regular fa-clock"></i> Tid i alt: <span class="tidIAlt">01:03</span> | Forberedelse <span
-					class="forberedelse">00:30</span> </p>
-			<p class="introduktion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore itaque tenetur
-				deserunt quisquam iusto
-				soluta nemo praesentium sint dolore recusandae. Illo voluptates amet incidunt ullam ratione quo enim,
-				odit autem!</p>
-			<p><span class="difficulty">Sværhedsgrad</span> | <span class="egenskab1">Frysbar/Kan laves dagen før</span>
-				| <span class="cuisine">Amerikansk</span></p>
-			<div class="heroSamling">
-				<p>Denne opskrift er en del af samlingen:</p>
-				<a href="#">Titel på opskrifsamling</a>
-			</div>
-			<div class="heroIkoner">
-				<a href="#">
-
-					<span><i class="fa-solid fa-star"></i>
-						<p>Tilføj til favoritter</p>
-					</span>
-				</a>
-				<a href="#">
-
-					<span><i class="fa-solid fa-calendar"></i>
-						<p>Tilføj til madplan</p>
-					</span>
-				</a>
-				<a href="#">
-
-					<span><i class="fa-solid fa-list"></i>
-						<p>Tilføj til indkøb</p>
-					</span>
-				</a>
-				<a href="#">
-
-					<span><i class="fa-solid fa-print"></i>
-						<p>Print opskrift</p>
-					</span>
-				</a>
-				<a href="#">
-
-					<span><i class="fa-regular fa-paper-plane"></i>
-						<p>Del opskrift</p>
-					</span>
-				</a>
-			</div>
+	<!-- <section class="mereInsp">
+		<div class="sectionTitle">
+			<h2>Udvalgte opskrifter</h2>
+			<a href="./opskrifter.html">Se alle opskrifter <i class="fa-solid fa-arrow-right"></i></a>
 		</div>
-		<div class="hero-billede">
-			<img src=".//assets/img/ultimate-veggie-burgers.webp" alt="Ultimate Veggiew Burgers">
-		</div>
-	</section>
-	<section class="mainLayout">
-		<div class="ingredienser">
-			<h2>Ingredienser</h2>
-			<button class="antal">
-				<i class="fa-solid fa-minus"></i>
-				4 personer<i class="fa-solid fa-plus"></i>
-			</button>
-			<ul>
-				<li>1/2 kop varm vand</li>
-				<li>1/4 tsk salt</li>
-				<li>1/4 tsk sukker</li>
-				<li>1/4 tsk bagepulver</li>
-				<li>1/2 tsk malurt</li>
-				<li>1/2 tsk kanel</li>
-				<li>1/2 tsk krydderrod</li>
-				<li>1/2 tsk peber</li>
-			</ul>
-			<button class="tilføj"><i class="fa-solid fa-list"></i> <span>Tilføj ingredienser til
-					indkøbsliste</span></button>
-		</div>
+		<div class="opskriftCards">
 
-		<div class="fremgangsmaade">
-			<h2>Sådan gør du</h2>
-			<label class="checkbox-container">
-				<input type="checkbox">
-				Hold min skærm tændt
-			</label>
-			<div class="fremgangsmaadeTrin">
-				<ol>
-					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, provident.</li>
-					<li>Voluptas enim dolorem porro asperiores non expedita. Officiis, cupiditate sapiente?</li>
-					<li>Magni repellat, error itaque ipsa sint iusto a veniam quos?</li>
-					<li>Pariatur, vero quos. Ut laborum error ipsam earum consequatur ratione.</li>
-					<li>Odio sint iusto asperiores totam voluptatibus id eum tempore beatae?</li>
-					<li>Illo, porro? Quibusdam ea numquam esse eius voluptas, obcaecati consectetur!</li>
-					<li>Eveniet aperiam iusto debitis, nulla numquam aliquid vitae repudiandae dolorum!</li>
-					<li>Facere eius quidem odio iste eveniet temporibus doloremque a! Dolore.</li>
-				</ol>
-			</div>
-			<p class="kilde">Kilde: From MakeBetterFood.com. Mar 18, 2013.
-				(makebetterfood.com/recipes/broccoli-millet-quesadillas/). Adapted from Oh My Veggies.</p>
+			<a href="opskrift.html" class="cardLink">
+				<article>
+					<img src="./assets/img/macaroni-and-cheese.webp" alt="Græsk salat" />
+
+					<div class="cardInfo">
+						<div class="cardTitle">
+							<h3>Aspargessuppe</h3>
+							<i class="fa-solid fa-star"></i>
+						</div>
+
+						<p><i class="fa-regular fa-clock"></i> 40 min | Begynder</p>
+					</div>
+				</article>
+			</a>
+			<article>
+				<img src="./assets/img/macaroni-and-cheese.webp" alt="Græsk salat" />
+				<div class="cardInfo">
+					<div class="cardTitle">
+						<h3>Mac & Cheese</h3>
+						<i class="fa-regular fa-star"></i>
+					</div>
+
+					<p><i class="fa-regular fa-clock"></i> 1 time 30 min | Øvet</p>
+				</div>
+			</article>
+			<article>
+				<img src="./assets/img/macaroni-and-cheese.webp" alt="Græsk salat" />
+				<div class="cardInfo">
+					<div class="cardTitle">
+						<h3>Mac & Cheese</h3>
+						<i class="fa-regular fa-star"></i>
+					</div>
+
+					<p><i class="fa-regular fa-clock"></i> 40 min</p>
+				</div>
+			</article>
+			<article>
+				<img src="./assets/img/macaroni-and-cheese.webp" alt="Græsk salat" />
+				<div class="cardInfo">
+					<div class="cardTitle">
+						<h3>Mac & Cheese</h3>
+						<i class="fa-regular fa-star"></i>
+					</div>
+
+					<p><i class="fa-regular fa-clock"></i> 40 min</p>
+				</div>
+			</article>
 		</div>
 	</section> -->
 
-	<section class="mereInsp">
-		<div class="sectionTitle">
-			<h2>Udvalgte opskrifter</h2>
-			<a href="./opskrifter.html">Se alle opskrifter <i class="fa-solid fa-arrow-right"></i></a>
-		</div>
-		<div class="opskriftCards">
-
-			<a href="opskrift.html" class="cardLink">
-				<article>
-					<img src="./assets/img/macaroni-and-cheese.webp" alt="Græsk salat" />
-
-					<div class="cardInfo">
-						<div class="cardTitle">
-							<h3>Aspargessuppe</h3>
-							<i class="fa-solid fa-star"></i>
-						</div>
-
-						<p><i class="fa-regular fa-clock"></i> 40 min | Begynder</p>
-					</div>
-				</article>
-			</a>
-			<article>
-				<img src="./assets/img/macaroni-and-cheese.webp" alt="Græsk salat" />
-				<div class="cardInfo">
-					<div class="cardTitle">
-						<h3>Mac & Cheese</h3>
-						<i class="fa-regular fa-star"></i>
-					</div>
-
-					<p><i class="fa-regular fa-clock"></i> 1 time 30 min | Øvet</p>
-				</div>
-			</article>
-			<article>
-				<img src="./assets/img/macaroni-and-cheese.webp" alt="Græsk salat" />
-				<div class="cardInfo">
-					<div class="cardTitle">
-						<h3>Mac & Cheese</h3>
-						<i class="fa-regular fa-star"></i>
-					</div>
-
-					<p><i class="fa-regular fa-clock"></i> 40 min</p>
-				</div>
-			</article>
-			<article>
-				<img src="./assets/img/macaroni-and-cheese.webp" alt="Græsk salat" />
-				<div class="cardInfo">
-					<div class="cardTitle">
-						<h3>Mac & Cheese</h3>
-						<i class="fa-regular fa-star"></i>
-					</div>
-
-					<p><i class="fa-regular fa-clock"></i> 40 min</p>
-				</div>
-			</article>
-		</div>
-	</section>
-
 	<section class="anbefalede">
 		<div class="sectionTitle">
-			<h2>Udvalgte opskrifter</h2>
+			<h2>Anbefalede opskrifter</h2>
 			<a href="./opskrifter.html">Se alle opskrifter <i class="fa-solid fa-arrow-right"></i></a>
 		</div>
 		<div class="opskriftCards">
 
-			<a href="opskrift.html" class="cardLink">
-				<article>
-					<img src="./assets/img/macaroni-and-cheese.webp" alt="Græsk salat" />
+			<article>
+				<a href="opskrift.html?id=252" class="cardLink">
+					<img src="./assets/img/stove-top-burgers.webp" alt="Klassisk burger" />
 
 					<div class="cardInfo">
 						<div class="cardTitle">
-							<h3>Aspargessuppe</h3>
+							<h3>Klassisk burger</h3>
 							<i class="fa-solid fa-star"></i>
 						</div>
 
-						<p><i class="fa-regular fa-clock"></i> 40 min | Begynder</p>
+						<p><i class="fa-regular fa-clock"></i> 00:30 | Begynder</p>
 					</div>
-				</article>
-			</a>
-			<article>
-				<img src="./assets/img/macaroni-and-cheese.webp" alt="Græsk salat" />
-				<div class="cardInfo">
-					<div class="cardTitle">
-						<h3>Mac & Cheese</h3>
-						<i class="fa-regular fa-star"></i>
-					</div>
-
-					<p><i class="fa-regular fa-clock"></i> 1 time 30 min | Øvet</p>
-				</div>
+				</a>
 			</article>
-			<article>
-				<img src="./assets/img/macaroni-and-cheese.webp" alt="Græsk salat" />
-				<div class="cardInfo">
-					<div class="cardTitle">
-						<h3>Mac & Cheese</h3>
-						<i class="fa-regular fa-star"></i>
-					</div>
 
-					<p><i class="fa-regular fa-clock"></i> 40 min</p>
-				</div>
-			</article>
 			<article>
-				<img src="./assets/img/macaroni-and-cheese.webp" alt="Græsk salat" />
-				<div class="cardInfo">
-					<div class="cardTitle">
-						<h3>Mac & Cheese</h3>
-						<i class="fa-regular fa-star"></i>
-					</div>
+				<a href="opskrift.html?id=249" class="cardLink">
+					<img src="./assets/img/carrot-ginger-soup (1).webp" alt="Cremet gulerodssuppe med ingefær" />
 
-					<p><i class="fa-regular fa-clock"></i> 40 min</p>
-				</div>
+					<div class="cardInfo">
+						<div class="cardTitle">
+							<h3>Cremet gulerodssuppe med ingefær</h3>
+							<i class="fa-regular fa-star"></i>
+						</div>
+
+						<p><i class="fa-regular fa-clock"></i> 00:40 | Begynder</p>
+					</div>
+				</a>
 			</article>
+
+			<article>
+				<a href="opskrift.html?id=246" class="cardLink">
+					<img src="./assets/img/chunky-carrot-spaghetti-sauce.webp"
+						alt="Grov gulerods-bolognese med spaghetti" />
+
+					<div class="cardInfo">
+						<div class="cardTitle">
+							<h3>Grov gulerods-bolognese med spaghetti</h3>
+							<i class="fa-regular fa-star"></i>
+						</div>
+
+						<p><i class="fa-regular fa-clock"></i> 00:30 | Mellem</p>
+					</div>
+				</a>
+			</article>
+
+			<article>
+				<a href="opskrift.html?id=243" class="cardLink">
+					<img src="./assets/img/creamy-vegetable-soup.webp" alt="Cremet grøntsagssuppe" />
+
+					<div class="cardInfo">
+						<div class="cardTitle">
+							<h3>Cremet grøntsagssuppe</h3>
+							<i class="fa-regular fa-star"></i>
+						</div>
+
+						<p><i class="fa-regular fa-clock"></i> 00:40 | Begynder</p>
+					</div>
+				</a>
+			</article>
+
 		</div>
 	</section>
 </body>

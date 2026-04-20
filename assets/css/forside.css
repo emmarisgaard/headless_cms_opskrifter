@@ -165,8 +165,9 @@ body {
         padding: var(--smSpacer);
         display: flex;
         flex-direction: column;
-        gap: var(--mdSpacer);
+        /* gap: var(--mdSpacer); */
 
+        justify-content: space-between;
 
 
         /* Titel + stjerne */
