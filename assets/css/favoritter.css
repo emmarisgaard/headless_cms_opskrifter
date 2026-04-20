@@ -4,7 +4,6 @@
 }
 
 body {
-    margin: 0 40px;
     background-color: #f0f0f0;
 }
 
@@ -40,6 +39,30 @@ img {
 }
 
 /* layout */
+
+main {
+    margin: 0 40px;
+}
+
+
+/* Søgefelt */
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    /* Indsætter forstørrelsesglasset i højre side af søgefeltet */
+    i {
+        position: absolute;
+        right: 12px;
+        color: var(--black);
+    }
+
+    /* Input tekstfarve skal være sort */
+    input {
+        color: var(--black);
+    }
+}
 
 .favoritter-page {
     display: grid;
