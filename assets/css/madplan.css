@@ -4,7 +4,6 @@
 }
 
 body {
-    margin: 0 40px;
     background-color: #f0f0f0;
 }
 
@@ -36,6 +35,11 @@ h3 {
 img {
     max-width: 100%;
     display: block;
+}
+
+main {
+    margin: var(--lgSpacer);
+
 }
 
 /* MADPLAN SIDE */
