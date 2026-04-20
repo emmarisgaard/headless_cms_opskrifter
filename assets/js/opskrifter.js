@@ -1,36 +1,34 @@
-// Base URL til dit WordPress API
+//Henter opskrifter fra WordPress REST API og viser dem som kort på siden
+
+//Henter api
 const baseUrl = "https://tester.emmarisgaard.dk/wp-json/wp/v2/posts";
 
 
-// ----------------------
-// START: Hent opskrifter når siden loader
-// ----------------------
+// finder category fra URL (fx ?category=61)
+const params = new URLSearchParams(window.location.search);
+const categoryId = params.get("category");
+
+
+// Hent opskrifter når siden loader
 getAllRecipes();
 
 
-// ----------------------
-// MAPPING (ID → tekst)
-// ----------------------
-const difficultyMap = {
-    46: "Begynder",
-    47: "Mellem",
-    48: "Avanceret"
-};
-
-
-// ----------------------
-// HENT KUN OPSKRIFTER (kategori ID = 57)
-// ----------------------
+//Funktion til at hente alle opskrifter - opskrifter har id 57 i wordpress, derfor tilføjes &categories=57 i url'en for at filtrere på det
 async function getAllRecipes() {
 
     try {
+
+        // hvis der er valgt kategori → brug den
+        // ellers fallback til "Opskrift" (57)
+        const categoryQuery = categoryId ? categoryId : 57;
+
         const response = await fetch(
-            `${baseUrl}?acf_format=standard&per_page=100&categories=57`
+            `${baseUrl}?acf_format=standard&per_page=100&categories=${categoryQuery}`
         );
 
         const posts = await response.json();
 
-        console.log("Hentede opskrifter:", posts);
+        console.log("Opskrifter:", posts);
 
         renderRecipes(posts);
 
@@ -40,22 +38,18 @@ async function getAllRecipes() {
 }
 
 
-// ----------------------
-// RENDER OPSKRIFTER SOM CARDS
-// ----------------------
+// Funktion til at vise opskrifterne på siden
 function renderRecipes(posts) {
 
-    const container = document.querySelector(".opskrift-grid");
-    container.innerHTML = "";
+    const container = document.querySelector(".opskrift-grid"); //Finder containeren på siden hvor opskrifterne skal vises
+    container.innerHTML = ""; //Tømmer containeren for indhold
 
     posts.forEach(post => {
 
-        // Finder difficulty via mapping (fra taxonomy ID)
-        const difficultyId = post["dificulty-level"]?.[0];
-        const difficulty = difficultyMap[difficultyId] || "";
-
+        // Tilføjer et card til HTML
+        // Card er nu gjort til et link så vi slipper for JS click events
         container.innerHTML += `
-        <article class="opskrift-kort">
+        <a href="opskrift.html?id=${post.id}" class="opskrift-kort">
 
             <!-- Billede -->
             <img class="opskrift-kort__billede" 
@@ -73,13 +67,13 @@ function renderRecipes(posts) {
 
                 <!-- Tid + sværhed -->
                 <p>
-                    <i class="fa-solid fa-stopwatch"></i>
-                    ${post.acf.total_time} ${difficulty ? "| " + difficulty : ""}
+                    <i class="fa-regular fa-clock"></i>
+                    ${post.acf.total_time} | ${post.acf?.difficulty?.[0]?.name}
                 </p>
 
             </div>
 
-        </article>
+        </a>
         `;
     });
 }

@@ -28,22 +28,23 @@
 					Opskrifter <i class="fa-solid fa-chevron-down"></i>
 				</a>
 
+				<!-- Drowdown menu med vores valgte kategorier og det id de har i wordpress, så vi kan lytte efter click og hente de rigtige opskrifter -->
 				<ul class="dropdown-menu opskrifter-menu">
-					<li><a href="#">Alle opskrifter</a></li>
+					<li><a href="../opskrifter.html?category=57">Alle opskrifter</a></li>
 					<div class="dropdown-divider"></div>
-					<li><a href="#">Morgenmad & Brunch</a></li>
+					<li><a href="../opskrifter.html?category=58">Morgenmad & Brunch</a></li>
 					<div class="dropdown-divider"></div>
-					<li><a href="#">Frokost & Madpakke</a></li>
+					<li><a href="../opskrifter.html?category=59">Frokost & Madpakke</a></li>
 					<div class="dropdown-divider"></div>
-					<li><a href="#">Hovedretter / Aftensmad</a></li>
+					<li><a href="../opskrifter.html?category=60">Hovedretter / Aftensmad</a></li>
 					<div class="dropdown-divider"></div>
-					<li><a href="#">Desserter</a></li>
+					<li><a href="../opskrifter.html?category=63">Desserter</a></li>
 					<div class="dropdown-divider"></div>
-					<li><a href="#">Snacks & Småretter</a></li>
+					<li><a href="../opskrifter.html?category=61">Snacks & Småretter</a></li>
 					<div class="dropdown-divider"></div>
-					<li><a href="#">Brød</a></li>
+					<li><a href="../opskrifter.html?category=62">Brød</a></li>
 					<div class="dropdown-divider"></div>
-					<li><a href="#">Drikke</a></li>
+					<li><a href="../opskrifter.html?category=64">Drikke</a></li>
 				</ul>
 			</li>
 
@@ -161,52 +162,70 @@
 				<h2>Udvalgte opskrifter</h2>
 				<a href="./opskrifter.html">Se alle opskrifter <i class="fa-solid fa-arrow-right"></i></a>
 			</div>
+
 			<div class="opskriftCards">
 
 				<article>
-					<img src="./assets/img/macaroni-and-cheese.webp" alt="Græsk salat" />
-					<div class="cardInfo">
-						<div class="cardTitle">
-							<h3>Mac & Cheese</h3>
-							<i class="fa-solid fa-star"></i>
-						</div>
+					<a href="opskrift.html?id=252" class="cardLink">
+						<img src="./assets/img/stove-top-burgers.webp" alt="Klassisk burger" />
 
-						<p><i class="fa-solid fa-stopwatch"></i> 40 min | Begynder</p>
-					</div>
+						<div class="cardInfo">
+							<div class="cardTitle">
+								<h3>Klassisk burger</h3>
+								<i class="fa-solid fa-star"></i>
+							</div>
+
+							<p><i class="fa-regular fa-clock"></i> 00:30 | Begynder</p>
+						</div>
+					</a>
 				</article>
+
 				<article>
-					<img src="./assets/img/macaroni-and-cheese.webp" alt="Græsk salat" />
-					<div class="cardInfo">
-						<div class="cardTitle">
-							<h3>Mac & Cheese</h3>
-							<i class="fa-regular fa-star"></i>
-						</div>
+					<a href="opskrift.html?id=249" class="cardLink">
+						<img src="./assets/img/carrot-ginger-soup (1).webp" alt="Cremet gulerodssuppe med ingefær" />
 
-						<p><i class="fa-solid fa-stopwatch"></i> 1 time 30 min | Øvet</p>
-					</div>
+						<div class="cardInfo">
+							<div class="cardTitle">
+								<h3>Cremet gulerodssuppe med ingefær</h3>
+								<i class="fa-regular fa-star"></i>
+							</div>
+
+							<p><i class="fa-regular fa-clock"></i> 00:40 | Begynder</p>
+						</div>
+					</a>
 				</article>
+
 				<article>
-					<img src="./assets/img/macaroni-and-cheese.webp" alt="Græsk salat" />
-					<div class="cardInfo">
-						<div class="cardTitle">
-							<h3>Mac & Cheese</h3>
-							<i class="fa-regular fa-star"></i>
-						</div>
+					<a href="opskrift.html?id=246" class="cardLink">
+						<img src="./assets/img/chunky-carrot-spaghetti-sauce.webp"
+							alt="Grov gulerods-bolognese med spaghetti" />
 
-						<p><i class="fa-solid fa-stopwatch"></i> 40 min</p>
-					</div>
+						<div class="cardInfo">
+							<div class="cardTitle">
+								<h3>Grov gulerods-bolognese med spaghetti</h3>
+								<i class="fa-regular fa-star"></i>
+							</div>
+
+							<p><i class="fa-regular fa-clock"></i> 00:30 | Mellem</p>
+						</div>
+					</a>
 				</article>
+
 				<article>
-					<img src="./assets/img/macaroni-and-cheese.webp" alt="Græsk salat" />
-					<div class="cardInfo">
-						<div class="cardTitle">
-							<h3>Mac & Cheese</h3>
-							<i class="fa-regular fa-star"></i>
-						</div>
+					<a href="opskrift.html?id=243" class="cardLink">
+						<img src="./assets/img/creamy-vegetable-soup.webp" alt="Cremet grøntsagssuppe" />
 
-						<p><i class="fa-solid fa-stopwatch"></i> 40 min</p>
-					</div>
+						<div class="cardInfo">
+							<div class="cardTitle">
+								<h3>Cremet grøntsagssuppe</h3>
+								<i class="fa-regular fa-star"></i>
+							</div>
+
+							<p><i class="fa-regular fa-clock"></i> 00:40 | Begynder</p>
+						</div>
+					</a>
 				</article>
+
 			</div>
 		</section>
 		<section class="kategoriSektion">
@@ -217,32 +236,50 @@
 			<div class="kategoriCards">
 
 				<article>
-					<img src="./assets/img/macaroni-and-cheese.webp" alt="Græsk salat" />
-					<h3>Morgenmad & Brunch</h3>
+					<a href="./opskrifter.html?category=58">
+						<img src="./assets/img/low-carb-oatmeal-pancakes.webp" alt="pandekager" />
+						<h3>Morgenmad & Brunch</h3>
+					</a>
 				</article>
 				<article>
-					<img src="./assets/img/macaroni-and-cheese.webp" alt="Græsk salat" />
-					<h3>Frokost & Madpakke</h3>
+					<a href="./opskrifter.html?category=59">
+
+						<img src="./assets/img/broccoli-millet-quesadillas.webp" alt="Quesadillas" />
+						<h3>Frokost & Madpakke</h3>
+					</a>
 				</article>
 				<article>
-					<img src="./assets/img/macaroni-and-cheese.webp" alt="Græsk salat" />
-					<h3>Hovedretter / Aftensmad</h3>
+					<a href="./opskrifter.html?category=60">
+						<img src="./assets/img/napoletana-margherita-pizza.webp" alt="pizza" />
+						<h3>Hovedretter / Aftensmad</h3>
+					</a>
 				</article>
 				<article>
-					<img src="./assets/img/macaroni-and-cheese.webp" alt="Græsk salat" />
-					<h3>Desserter</h3>
+					<a href="./opskrifter.html?category=63">
+
+						<img src="./assets/img/strawberry-pie.webp" alt="Jordbærtærte" />
+						<h3>Desserter</h3>
+					</a>
 				</article>
 				<article>
-					<img src="./assets/img/macaroni-and-cheese.webp" alt="Græsk salat" />
-					<h3>Snacks & Småretter</h3>
+					<a href="./opskrifter.html?category=61">
+
+						<img src="./assets/img/garlic-bread.webp" alt="Hvidløgsbrød" />
+						<h3>Snacks & Småretter</h3>
+					</a>
 				</article>
 				<article>
-					<img src="./assets/img/macaroni-and-cheese.webp" alt="Græsk salat" />
-					<h3>Brød</h3>
+					<a href="./opskrifter.html?category=62">
+						<img src="./assets/img/no-knead-bread.webp" alt="Brød" />
+						<h3>Brød</h3>
+					</a>
 				</article>
 				<article>
-					<img src="./assets/img/macaroni-and-cheese.webp" alt="Græsk salat" />
-					<h3>Drikke</h3>
+					<a href="./opskrifter.html?category=64">
+
+						<img src="./assets/img/blueberry-mango-smoothie.webp" alt="smoothie" />
+						<h3>Drikke</h3>
+					</a>
 				</article>
 			</div>
 		</section>

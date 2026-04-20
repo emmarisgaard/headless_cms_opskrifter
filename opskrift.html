@@ -8,10 +8,197 @@
 	<link rel="stylesheet" href="./assets/css/style.css" />
 	<link rel="stylesheet" href="./assets/css/opskrift.css" />
 	<script src="./assets/js/app.js" defer></script>
+	<script src="./assets/js/opskrift.js" defer></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+
 </head>
 
 <body>
+	<!-- Global Navigation -->
+	<nav>
+		<ul>
+			<li class="logo"><a href="./index.html">MadGlad</a></li>
 
+			<!-- OPSKRIFTER -->
+			<li class="dropdown">
+				<a href="#" id="opskrifterBtn">
+					Opskrifter <i class="fa-solid fa-chevron-down"></i>
+				</a>
+
+				<ul class="dropdown-menu opskrifter-menu">
+					<li><a href="../opskrifter.html">Alle opskrifter</a></li>
+					<div class="dropdown-divider"></div>
+					<li><a href="../opskrifter.html">Morgenmad & Brunch</a></li>
+					<div class="dropdown-divider"></div>
+					<li><a href="../opskrifter.html">Frokost & Madpakke</a></li>
+					<div class="dropdown-divider"></div>
+					<li><a href="../opskrifter.html">Hovedretter / Aftensmad</a></li>
+					<div class="dropdown-divider"></div>
+					<li><a href="../opskrifter.html">Desserter</a></li>
+					<div class="dropdown-divider"></div>
+					<li><a href="../opskrifter.html">Snacks & Småretter</a></li>
+					<div class="dropdown-divider"></div>
+					<li><a href="../opskrifter.html">Brød</a></li>
+					<div class="dropdown-divider"></div>
+					<li><a href="../opskrifter.html">Drikke</a></li>
+				</ul>
+			</li>
+
+			<li><a href="./inspiration.html">Inspiration</a></li>
+		</ul>
+
+		<div class="dropdown">
+
+			<div class="search-box">
+				<input type="text" placeholder="Søg efter opskrifter..." />
+				<i class="fa-solid fa-magnifying-glass"></i>
+			</div>
+
+			<a href="#" id="minSideBtn">
+				<i class="fa-regular fa-user"></i> Min side
+				<i class="fa-solid fa-chevron-down"></i>
+			</a>
+
+			<ul class="dropdown-menu min-side-menu">
+				<li><a href="./favoritter.html"><i class="fa-solid fa-star"></i> Favoritter</a></li>
+				<div class="dropdown-divider"></div>
+				<li><a href="./madplan.html"><i class="fa-solid fa-calendar"></i> Madplan</a></li>
+				<div class="dropdown-divider"></div>
+				<li><a href="#"><i class="fa-solid fa-list"></i> Indkøbsliste</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- Opskrift data hentes fra api og indsættes i denne div -->
+	<div class="opskrift-container"></div>
+
+	<!-- <section class="mereInsp">
+		<div class="sectionTitle">
+			<h2>Udvalgte opskrifter</h2>
+			<a href="./opskrifter.html">Se alle opskrifter <i class="fa-solid fa-arrow-right"></i></a>
+		</div>
+		<div class="opskriftCards">
+
+			<a href="opskrift.html" class="cardLink">
+				<article>
+					<img src="./assets/img/macaroni-and-cheese.webp" alt="Græsk salat" />
+
+					<div class="cardInfo">
+						<div class="cardTitle">
+							<h3>Aspargessuppe</h3>
+							<i class="fa-solid fa-star"></i>
+						</div>
+
+						<p><i class="fa-regular fa-clock"></i> 40 min | Begynder</p>
+					</div>
+				</article>
+			</a>
+			<article>
+				<img src="./assets/img/macaroni-and-cheese.webp" alt="Græsk salat" />
+				<div class="cardInfo">
+					<div class="cardTitle">
+						<h3>Mac & Cheese</h3>
+						<i class="fa-regular fa-star"></i>
+					</div>
+
+					<p><i class="fa-regular fa-clock"></i> 1 time 30 min | Øvet</p>
+				</div>
+			</article>
+			<article>
+				<img src="./assets/img/macaroni-and-cheese.webp" alt="Græsk salat" />
+				<div class="cardInfo">
+					<div class="cardTitle">
+						<h3>Mac & Cheese</h3>
+						<i class="fa-regular fa-star"></i>
+					</div>
+
+					<p><i class="fa-regular fa-clock"></i> 40 min</p>
+				</div>
+			</article>
+			<article>
+				<img src="./assets/img/macaroni-and-cheese.webp" alt="Græsk salat" />
+				<div class="cardInfo">
+					<div class="cardTitle">
+						<h3>Mac & Cheese</h3>
+						<i class="fa-regular fa-star"></i>
+					</div>
+
+					<p><i class="fa-regular fa-clock"></i> 40 min</p>
+				</div>
+			</article>
+		</div>
+	</section> -->
+
+	<section class="anbefalede">
+		<div class="sectionTitle">
+			<h2>Anbefalede opskrifter</h2>
+			<a href="./opskrifter.html">Se alle opskrifter <i class="fa-solid fa-arrow-right"></i></a>
+		</div>
+		<div class="opskriftCards">
+
+			<article>
+				<a href="opskrift.html?id=252" class="cardLink">
+					<img src="./assets/img/stove-top-burgers.webp" alt="Klassisk burger" />
+
+					<div class="cardInfo">
+						<div class="cardTitle">
+							<h3>Klassisk burger</h3>
+							<i class="fa-solid fa-star"></i>
+						</div>
+
+						<p><i class="fa-regular fa-clock"></i> 00:30 | Begynder</p>
+					</div>
+				</a>
+			</article>
+
+			<article>
+				<a href="opskrift.html?id=249" class="cardLink">
+					<img src="./assets/img/carrot-ginger-soup (1).webp" alt="Cremet gulerodssuppe med ingefær" />
+
+					<div class="cardInfo">
+						<div class="cardTitle">
+							<h3>Cremet gulerodssuppe med ingefær</h3>
+							<i class="fa-regular fa-star"></i>
+						</div>
+
+						<p><i class="fa-regular fa-clock"></i> 00:40 | Begynder</p>
+					</div>
+				</a>
+			</article>
+
+			<article>
+				<a href="opskrift.html?id=246" class="cardLink">
+					<img src="./assets/img/chunky-carrot-spaghetti-sauce.webp"
+						alt="Grov gulerods-bolognese med spaghetti" />
+
+					<div class="cardInfo">
+						<div class="cardTitle">
+							<h3>Grov gulerods-bolognese med spaghetti</h3>
+							<i class="fa-regular fa-star"></i>
+						</div>
+
+						<p><i class="fa-regular fa-clock"></i> 00:30 | Mellem</p>
+					</div>
+				</a>
+			</article>
+
+			<article>
+				<a href="opskrift.html?id=243" class="cardLink">
+					<img src="./assets/img/creamy-vegetable-soup.webp" alt="Cremet grøntsagssuppe" />
+
+					<div class="cardInfo">
+						<div class="cardTitle">
+							<h3>Cremet grøntsagssuppe</h3>
+							<i class="fa-regular fa-star"></i>
+						</div>
+
+						<p><i class="fa-regular fa-clock"></i> 00:40 | Begynder</p>
+					</div>
+				</a>
+			</article>
+
+		</div>
+	</section>
 </body>
 
 </html>

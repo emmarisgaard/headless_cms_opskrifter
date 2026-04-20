@@ -19,7 +19,14 @@ body {
     .filter-toggle {
         display: none;
     }
+
+    /* position: sticky;
+    top: 120px;
+    /* justér efter højden på din navbar */
+    /* height: fit-content; */
+    */
 }
+
 
 /* FILTER SEKTIONER - overskrifter */
 /* Ændrer styling kun på de labels der er children af .filter-sektion - dvs. overskrifter i accordion */
