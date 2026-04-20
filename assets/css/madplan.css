@@ -53,21 +53,19 @@ img {
     width: 30px;
     height: 30px;
     margin-left: var(--mdSpacer);
+    border: none;
+    box-shadow: var(--shadowButton);
 }
 
 .uge-header button:hover {
     background-color: var(--darkGreen);
     font-size: 18px;
     cursor: pointer;
+    transition: var(--transitionHover);
+    transform: var(--scaleHover);
+
 }
 
-.add {
-    background: var(--white);
-    padding: var(--smSpacer);
-    border-radius: 5px;
-    border: 1px dashed grey;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
 
 /* Week grid */
 .weekdays {
@@ -83,12 +81,13 @@ img {
     padding: var(--smSpacer);
     border-radius: 5px;
     border: 1px solid grey;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadowCards);
 
     display: flex;
     flex-direction: column;
     height: 300px;
 }
+
 
 .onsdag-card {
     background: var(--lightGreen);
@@ -107,6 +106,21 @@ img {
 .day-number {
     margin: 0;
     font-weight: bold;
+}
+
+/* hovers på uge cards */
+.day-card:hover,
+.onsdag-card:hover {
+    transition: var(--transitionHover);
+    transform: var(--scaleHover);
+    cursor: pointer;
+}
+
+/* Mad på uge */
+.mp-week {
+    display: flex;
+    flex-direction: column;
+    gap: var(--smSpacer)
 }
 
 /* Mad på uge cards */
@@ -136,6 +150,15 @@ img {
     color: rgb(72, 72, 72);
 }
 
+.add {
+    background: var(--white);
+    padding: var(--smSpacer);
+    border-radius: 5px;
+    border: 1px dashed grey;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: var(--smSpacer);
+}
+
 /* Opskrifter */
 
 .opskrift-grid {
@@ -148,12 +171,17 @@ img {
     display: flex;
     gap: var(--mdSpacer);
     background: var(--white);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadowCards);
     height: 200px;
 
     padding: 0;
     overflow: hidden;
-    /* 👈 vigtigt for kant-til-kant billede */
+}
+
+.recipe-card:hover {
+    transform: var(--scaleHover);
+    transition: var(--transitionHover);
+    cursor: pointer;
 }
 
 /* billede */
@@ -196,7 +224,8 @@ img {
 }
 
 .mp-button {
-    border: 1px solid var(--darkGreen);
+    border: none;
+    box-shadow: var(--shadowButton);
     background: var(--lightGreen);
     padding: 8px;
     border-radius: 5px;
@@ -218,7 +247,7 @@ img {
 
 .anb-card {
     background: var(--white);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadowCards);
 
     display: flex;
     flex-direction: column;
@@ -226,8 +255,20 @@ img {
 
     padding: 0;
     overflow: hidden;
-    /* 👈 vigtigt */
 }
+
+.anb-card p {
+    padding: var(--smSpacer);
+    color: #555;
+    margin-bottom: var(--smSpacer);
+}
+
+.anb-card:hover {
+    transform: var(--scaleHover);
+    transition: var(--transitionHover);
+    cursor: pointer;
+}
+
 
 /* billede */
 .anb-card img {

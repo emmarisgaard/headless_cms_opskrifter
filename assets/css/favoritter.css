@@ -4,7 +4,6 @@
 }
 
 body {
-    margin: 0 40px;
     background-color: #f0f0f0;
 }
 
@@ -41,6 +40,30 @@ img {
 
 /* layout */
 
+main {
+    margin: 0 40px;
+}
+
+
+/* Søgefelt */
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    /* Indsætter forstørrelsesglasset i højre side af søgefeltet */
+    i {
+        position: absolute;
+        right: 12px;
+        color: var(--black);
+    }
+
+    /* Input tekstfarve skal være sort */
+    input {
+        color: var(--black);
+    }
+}
+
 .favoritter-page {
     display: grid;
     grid-template-columns: 260px 1fr;
@@ -75,12 +98,14 @@ img {
     border-radius: 5px;
     padding: var(--smSpacer);
     cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-    transition: background 0.15s;
+    box-shadow: var(--shadowCards);
+    transition: var(--transitionHover);
 }
 
 .samling-card:hover {
     background: #e8f0e5;
+    transform: var(--scaleHover);
+    transition: var(--transitionHover);
 }
 
 .samling-card.active {
@@ -176,13 +201,20 @@ img {
     gap: var(--mdSpacer);
 }
 
+/* favorit card hover */
+.fav-card:hover {
+    transform: var(--scaleHover);
+    transition: var(--transitionHover);
+
+}
 
 .fav-card {
     background: var(--white);
     overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadowCards);
     display: flex;
     flex-direction: column;
+    cursor: pointer;
 }
 
 .fav-card-img {
@@ -221,16 +253,18 @@ img {
     display: flex;
     gap: 8px;
     margin-top: auto;
+
 }
 
 .fav-btn {
     flex: 1;
     padding: 7px 4px;
     border-radius: 5px;
-    border: 1px solid var(--darkGreen);
+    box-shadow: var(--shadowButton);
     background: var(--lightGreen);
     font-size: 13px;
     cursor: pointer;
+    border: none;
 }
 
 .fav-btn:hover {
