@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>MadGlad | Skjulte grøntsager</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+	<link rel="stylesheet" href="./assets/css/style.css" />
+	<link rel="stylesheet" href="./assets/css/samling.css" />
+	<script src="./assets/js/app.js" defer></script>
+
+</head>
+
+<body>
+
+	<!-- Navigation -->
+	<nav>
+		<ul>
+			<li class="logo"><a href="./index.html">MadGlad</a></li>
+
+			<!-- OPSKRIFTER -->
+			<li class="dropdown">
+				<a href="#" id="opskrifterBtn">
+					Opskrifter <i class="fa-solid fa-chevron-down"></i>
+				</a>
+
+				<!-- Drowdown menu med vores valgte kategorier og det id de har i wordpress, så vi kan lytte efter click og hente de rigtige opskrifter -->
+				<ul class="dropdown-menu opskrifter-menu">
+					<li><a href="../opskrifter.html?category=57">Alle opskrifter</a></li>
+					<div class="dropdown-divider"></div>
+					<li><a href="../opskrifter.html?category=58">Morgenmad & Brunch</a></li>
+					<div class="dropdown-divider"></div>
+					<li><a href="../opskrifter.html?category=59">Frokost & Madpakke</a></li>
+					<div class="dropdown-divider"></div>
+					<li><a href="../opskrifter.html?category=60">Hovedretter / Aftensmad</a></li>
+					<div class="dropdown-divider"></div>
+					<li><a href="../opskrifter.html?category=63">Desserter</a></li>
+					<div class="dropdown-divider"></div>
+					<li><a href="../opskrifter.html?category=61">Snacks & Småretter</a></li>
+					<div class="dropdown-divider"></div>
+					<li><a href="../opskrifter.html?category=62">Brød</a></li>
+					<div class="dropdown-divider"></div>
+					<li><a href="../opskrifter.html?category=64">Drikke</a></li>
+				</ul>
+			</li>
+
+			<li><a href="./inspiration.html">Inspiration</a></li>
+		</ul>
+
+		<div class="dropdown">
+
+			<div class="search-box">
+				<input type="text" placeholder="Søg efter opskrifter..." />
+				<i class="fa-solid fa-magnifying-glass"></i>
+			</div>
+
+			<a href="#" id="minSideBtn">
+				<i class="fa-regular fa-user"></i> Min side
+				<i class="fa-solid fa-chevron-down"></i>
+			</a>
+
+			<ul class="dropdown-menu min-side-menu">
+				<li><a href="./favoritter.html"><i class="fa-solid fa-star"></i> Favoritter</a></li>
+				<div class="dropdown-divider"></div>
+				<li><a href="./madplan.html"><i class="fa-solid fa-calendar"></i> Madplan</a></li>
+				<div class="dropdown-divider"></div>
+				<li><a href="#"><i class="fa-solid fa-list"></i> Indkøbsliste</a></li>
+			</ul>
+		</div>
+	</nav>
+
+
+	<!-- Collection Hero -->
+	<section class="collectionHero">
+		<div class="collectionHeroInfo">
+			<h1 class="collectionTitle">Forårs Grillaften</h1>
+			<span class="collectionCount">(6 opskrifter)</span>
+			<p class="collectionDesc">
+				Gør klar til en hyggelig forårs grill aften med lækre retter, hele familien kan
+				samles om. Her finder du alt fra saftige burgere til frisk græsk salat og klassisk
+				kartoffelsalat.
+			</p>
+			<p class="collectionDesc">
+				Perfekt til de første rare dage, hvor maden gerne må være nem, smagfuld og
+				fyldt med god stemning omkring bordet.
+			</p>
+
+
+			<div class="actionButtons">
+				<div class="actionBtn">
+					<span class="actionIcon"><i class="fa-solid fa-star"></i></span>
+					<span class="actionLabel">Fjern fra<br>favoritter</span>
+				</div>
+				<div class="actionBtn">
+					<span class="actionIcon"><i class="fa-solid fa-calendar"></i></span>
+					<span class="actionLabel">Tilføj til<br>madplan</span>
+				</div>
+				<div class="actionBtn">
+					<span class="actionIcon"><i class="fa-solid fa-list"></i></span>
+					<span class="actionLabel">Tilføj til<br>indkøbsliste</span>
+				</div>
+				<div class="actionBtn">
+					<span class="actionIcon"><i class="fa-solid fa-print"></i></span>
+					<span class="actionLabel">Print<br>samling</span>
+				</div>
+				<div class="actionBtn">
+					<span class="actionIcon"><i class="fa-regular fa-paper-plane"></i></span>
+					<span class="actionLabel">Del<br>samling</span>
+				</div>
+			</div>
+		</div>
+		<div class="collectionHeroImage">
+			<img src="./assets/img/greek-salad.webp" alt="Græsk salat" />
+		</div>
+	</section>
+
+	<!-- Alle opskrifter i samlingen -->
+	<section class="recipeSection">
+		<div class="recipeSectionHeader">
+			<h2 class="recipeSectionTitle">Alle opskrifter i samlingen</h2>
+			<div class="sortDropdown">
+				<span>Sorter | A-Å ▾</span>
+			</div>
+		</div>
+		<div class="recipeGrid">
+
+			<!-- Recipe 1 -->
+			<article class="recipeCard clickable-card">
+				<a href="opskrift.html?id=252" class="stretched-link"></a>
+				<div class="recipeCardImage">
+					<img src="./assets/img/stove-top-burgers.webp" alt="Stovetop burgers" />
+				</div>
+				<div class="recipeCardBody">
+					<div class="recipeCardTitle">
+						<span>Klassisk burger</span>
+						<span class="favoriteStar"><i class="fa-regular fa-star"></i></span>
+					</div>
+					<div class="recipeMeta">
+						<span><i class="fa-regular fa-clock"></i> 00:30</span>
+						<span>| Begynder</span>
+					</div>
+				</div>
+			</article>
+
+			<!-- Recipe 2 -->
+			<article class="recipeCard clickable-card">
+				<a href="opskrift.html?id=230" class="stretched-link"></a>
+				<div class="recipeCardImage">
+					<img src="./assets/img/fluffy-burger-buns.webp" alt="Fluffy burger buns" />
+				</div>
+				<div class="recipeCardBody">
+					<div class="recipeCardTitle">
+						<span>Hjemmelavede burgerboller</span>
+						<span class="favoriteStar"><i class="fa-regular fa-star"></i></span>
+					</div>
+					<div class="recipeMeta">
+						<span><i class="fa-regular fa-clock"></i> 02:20</span>
+						<span>| Mellem</span>
+					</div>
+				</div>
+			</article>
+
+			<!-- Recipe 3 -->
+			<article class="recipeCard clickable-card">
+				<a href="opskrift.html?id=171" class="stretched-link"></a>
+				<div class="recipeCardImage">
+					<img src="./assets/img/greek-salad.webp" alt="Greek salad" />
+				</div>
+				<div class="recipeCardBody">
+					<div class="recipeCardTitle">
+						<span>Græsk salat</span>
+						<span class="favoriteStar"><i class="fa-regular fa-star"></i></span>
+					</div>
+					<div class="recipeMeta">
+						<span><i class="fa-regular fa-clock"></i> 00:20</span>
+						<span>| Begynder</span>
+					</div>
+				</div>
+			</article>
+
+			<!-- Recipe 4 -->
+			<article class="recipeCard clickable-card">
+				<a href="opskrift.html?id=176" class="stretched-link"></a>
+				<div class="recipeCardImage">
+					<img src="./assets/img/roasted-root-vegetables.webp" alt="Roasted root vegetables" />
+				</div>
+				<div class="recipeCardBody">
+					<div class="recipeCardTitle">
+						<span>Ovnstegte rodfrugter</span>
+						<span class="favoriteStar"><i class="fa-regular fa-star"></i></span>
+					</div>
+					<div class="recipeMeta">
+						<span><i class="fa-regular fa-clock"></i> 00:50</span>
+						<span>| Begynder</span>
+					</div>
+				</div>
+			</article>
+
+			<!-- Recipe 5 -->
+			<article class="recipeCard clickable-card">
+				<a href="opskrift.html?id=181" class="stretched-link"></a>
+				<div class="recipeCardImage">
+					<img src="./assets/img/sweet-potato-fries.webp" alt="Sweet potato fries" />
+				</div>
+				<div class="recipeCardBody">
+					<div class="recipeCardTitle">
+						<span>Sweet potato fries</span>
+						<span class="favoriteStar"><i class="fa-regular fa-star"></i></span>
+					</div>
+					<div class="recipeMeta">
+						<span><i class="fa-regular fa-clock"></i> 00:40</span>
+						<span>| Begynder</span>
+					</div>
+				</div>
+			</article>
+
+			<!-- Recipe 6 -->
+			<article class="recipeCard clickable-card">
+				<a href="opskrift.html?id=184" class="stretched-link"></a>
+				<div class="recipeCardImage">
+					<img src="./assets/img/potato-salad.webp" alt="Potato salad" />
+				</div>
+				<div class="recipeCardBody">
+					<div class="recipeCardTitle">
+						<span>Kartoffelsalat</span>
+						<span class="favoriteStar"><i class="fa-regular fa-star"></i></span>
+					</div>
+					<div class="recipeMeta">
+						<span><i class="fa-regular fa-clock"></i> 00:45</span>
+						<span>| Begynder</span>
+					</div>
+				</div>
+			</article>
+
+		</div>
+	</section>
+
+	<!-- Mere inspiration -->
+	<section class="moreInspiration">
+		<div class="moreInspirationHeader">
+			<h2 class="moreInspirationTitle">Mere inspiration</h2>
+			<a href="inspiration.html" class="seeAllLink">Se alle opskriftsamlinger →</a>
+		</div>
+		<div class="moreInspirationGrid">
+
+			<!-- Collection 1 -->
+			<article class="inspirationCard clickable-card">
+				<a href="samling-skjultegrøntsager.html" class="stretched-link"></a>
+				<div class="inspirationCardImage">
+					<img src="./assets/img/ultimate-veggie-burgers.webp" alt="Ultimate veggie burgers" />
+				</div>
+				<div class="inspirationCardBody">
+					<div class="inspirationCardHeader">
+						<h3>Skjulte Grøntsager <span class="recipeCount">(6 opskrifter)</span></h3>
+						<span class="favoriteStar"><i class="fa-regular fa-star"></i></span>
+					</div>
+					<p>Har du børn, der er vilde med grøntsager? I denne samling har vi gjort det
+						nemt at snige de gode ting ind i maden uden brok.</p>
+					<p>Her finder du lækre retter som guacamolepasta og cremet grøntsagssuppe, hvor
+						smagen er i fokus og grøntsagerne glider ubemærket med.</p>
+					<div class="cardArrow"><i class="fa-solid fa-arrow-right"></i></div>
+				</div>
+			</article>
+
+			<!-- Collection 2 -->
+			<article class="inspirationCard clickable-card">
+				<!-- <a href="samling.html" class="stretched-link"></a> -->
+				<div class="inspirationCardImage">
+					<img src="./assets/img/chicken-and-dumplings.webp" alt="Nem hverdagsmad" />
+				</div>
+				<div class="inspirationCardBody">
+					<div class="inspirationCardHeader">
+						<h3>Nem hverdagsmad <span class="recipeCount">(7 opskrifter)</span></h3>
+						<span class="favoriteStar"><i class="fa-regular fa-star"></i></span>
+					</div>
+					<p>Har du travlt i hverdagen, men vil stadig gerne lave
+						god mad til familien? Her finder du enkle og
+						velsmagende retter, der er hurtige at lave og
+						nemme at gå til.</p>
+					<p>Prøv fx en cremet one pot pasta eller en hurtig
+						kylling i fad – perfekt til dage, hvor det skal være
+						nemt uden at gå på kompromis med smagen.</p>
+					<div class="cardArrow"><i class="fa-solid fa-arrow-right"></i></div>
+				</div>
+			</article>
+
+			<!-- Collection 3 -->
+			<article class="inspirationCard clickable-card">
+				<!-- <a href="samling.html" class="stretched-link"></a> -->
+				<div class="inspirationCardImage">
+					<img src="./assets/img/sweet-potato-burritos.webp" alt="Kreative madpakker" />
+				</div>
+				<div class="inspirationCardBody">
+					<div class="inspirationCardHeader">
+						<h3>Kreative madpakker <span class="recipeCount">(5 opskrifter)</span></h3>
+						<span class="favoriteStar"><i class="fa-regular fa-star"></i></span>
+					</div>
+					<p>Gør madpakken lidt sjovere med små, lækre retter
+						der både mætter og overrasker. Her finder du
+						idéer, der er nemme at tage med og som børnene rent
+						faktisk gider spise og gå til at spise.</p>
+					<p>Prøv fx små pizzaruller eller wraps med kylling og
+						grønt – perfekt til en varieret og indbydende
+						madpakke.</p>
+					<div class="cardArrow"><i class="fa-solid fa-arrow-right"></i></div>
+				</div>
+			</article>
+
+		</div>
+	</section>
+
+	<!-- FOOTER -->
+	<footer>
+		<section class="nyhedsbrev">
+
+			<h2>Tilmeld dig vores nyhedsbrev!</h2>
+			<p>Få nem inspiration til hverdagsmad for hele familien.Vi deler lækre
+				opskrifter, smarte madtips og idéer til at gøre måltiderne både sundere og sjovere.
+			</p>
+			<p>
+				Få nye opskrifter direkte i din indbakke – klar til travle hverdage og hyggelige weekender.</p>
+
+
+			<input type="email" name="email" class="nyhedsbrev-email" placeholder="Indtast din email adresse..."
+				required>
+			<input type="button" value="Tilmeld nyhedsbrev" class="nyhedsbrev-btn">
+
+		</section>
+		<section class="socialMedia">
+			<a href="#"><i class="fa-brands fa-facebook"></i></a>
+			<a href="#"><i class="fa-brands fa-instagram"></i></a>
+			<a href="#"><i class="fa-brands fa-youtube"></i></a>
+		</section>
+	</footer>
+
+</body>
+
+</html>

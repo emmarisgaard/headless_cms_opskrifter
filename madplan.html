@@ -12,6 +12,7 @@
 </head>
 
 <body>
+	<!-- Navigation -->
 	<nav>
 		<ul>
 			<li class="logo"><a href="./index.html">MadGlad</a></li>
@@ -22,22 +23,23 @@
 					Opskrifter <i class="fa-solid fa-chevron-down"></i>
 				</a>
 
+				<!-- Drowdown menu med vores valgte kategorier og det id de har i wordpress, så vi kan lytte efter click og hente de rigtige opskrifter -->
 				<ul class="dropdown-menu opskrifter-menu">
-					<li><a href="#">Alle opskrifter</a></li>
+					<li><a href="../opskrifter.html?category=57">Alle opskrifter</a></li>
 					<div class="dropdown-divider"></div>
-					<li><a href="#">Morgenmad & Brunch</a></li>
+					<li><a href="../opskrifter.html?category=58">Morgenmad & Brunch</a></li>
 					<div class="dropdown-divider"></div>
-					<li><a href="#">Frokost & Madpakke</a></li>
+					<li><a href="../opskrifter.html?category=59">Frokost & Madpakke</a></li>
 					<div class="dropdown-divider"></div>
-					<li><a href="#">Hovedretter / Aftensmad</a></li>
+					<li><a href="../opskrifter.html?category=60">Hovedretter / Aftensmad</a></li>
 					<div class="dropdown-divider"></div>
-					<li><a href="#">Desserter</a></li>
+					<li><a href="../opskrifter.html?category=63">Desserter</a></li>
 					<div class="dropdown-divider"></div>
-					<li><a href="#">Snacks & Småretter</a></li>
+					<li><a href="../opskrifter.html?category=61">Snacks & Småretter</a></li>
 					<div class="dropdown-divider"></div>
-					<li><a href="#">Brød</a></li>
+					<li><a href="../opskrifter.html?category=62">Brød</a></li>
 					<div class="dropdown-divider"></div>
-					<li><a href="#">Drikke</a></li>
+					<li><a href="../opskrifter.html?category=64">Drikke</a></li>
 				</ul>
 			</li>
 
@@ -65,6 +67,7 @@
 			</ul>
 		</div>
 	</nav>
+
 	<main class="madplan-page">
 
 		<section class="ugeoversigt">
@@ -164,7 +167,7 @@
 			<h2 class="mp-h2">
 				Valgt: Onsdag d. 15. april | Lasagne | Spaghetti m. kødboller
 			</h2>
-			<a href="./opskrift.html" class="opskrift-card-madplan">
+			<a href="./opskrift.html?id=195" class="opskrift-card-madplan">
 
 				<div class="opskrift-grid">
 					<article class="recipe-card">
@@ -173,7 +176,7 @@
 							<div class="recipe-top">
 								<h3 class="recipe-name">Lasagne</h3>
 								<p class="recipe-time">
-									<i class="fa-regular fa-clock"></i> 1,5 time | Begynder
+									<i class="fa-regular fa-clock"></i> 01:30 | Mellem
 								</p>
 							</div>
 							<div class="recipe-actions">
@@ -184,7 +187,7 @@
 					</article>
 			</a>
 
-			<a href="./opskrift.html" class="opskrift-card-madplan">
+			<a href="./opskrift.html?id=192" class="opskrift-card-madplan">
 
 				<article class="recipe-card">
 					<img src="./assets/img/spaghetti-and-meatballs.webp" alt="Spaghetti m. kødboller">
@@ -192,7 +195,7 @@
 						<div class="recipe-top">
 							<h3 class="recipe-name">Spaghetti m. kødboller</h3>
 							<p class="recipe-time">
-								<i class="fa-regular fa-clock"></i> 1,5 time | Begynder
+								<i class="fa-regular fa-clock"></i> 02:30 | Mellem
 							</p>
 						</div>
 						<div class="recipe-actions">
@@ -217,40 +220,40 @@
 
 			<div class="anbefalede-grid">
 
-				<a href="./opskrift.html" class="opskrift-card-madplan">
+				<a href="./opskrift.html?id=226" class="opskrift-card-madplan">
 					<article class="anb-card">
 						<img src="./assets/img/chicken-and-dumplings.webp" alt="Kylling og dumplings" class="rec-img" />
 						<div class="anb-body">
 							<h3 class="rec-name">Kylling og dumplings</h3>
-							<p class="anb-tid"><i class="fa-regular fa-clock"></i> 1 time | Begynder</p>
+							<p class="anb-tid"><i class="fa-regular fa-clock"></i> 01:15 | Mellem</p>
 						</div>
 					</article>
 				</a>
-				<a href="./opskrift.html" class="opskrift-card-madplan">
+				<a href="./opskrift.html?id=213" class="opskrift-card-madplan">
 					<article class="anb-card">
 						<img src="./assets/img/beef-stroganoff.webp" alt="Bøf stroganoff" class="rec-img" />
 						<div class="anb-body">
 							<h3 class="rec-name">Bøf stroganoff</h3>
-							<p class="anb-tid"><i class="fa-regular fa-clock"></i> 50 minutter | Begynder</p>
+							<p class="anb-tid"><i class="fa-regular fa-clock"></i> 01:15 | Mellem</p>
 						</div>
 					</article>
 				</a>
-				<a href="./opskrift.html" class="opskrift-card-madplan">
+				<a href="./opskrift.html?id=198" class="opskrift-card-madplan">
 
 					<article class="anb-card">
 						<img src="./assets/img/macaroni-and-cheese.webp" alt="Mac and cheese" class="rec-img" />
 						<div class="anb-body">
 							<h3 class="rec-name">Mac and cheese</h3>
-							<p class="anb-tid"><i class="fa-regular fa-clock"></i> 30 minutter | Begynder</p>
+							<p class="anb-tid"><i class="fa-regular fa-clock"></i> 00:40 | Begynder</p>
 						</div>
 					</article>
 				</a>
-				<a href="./opskrift.html" class="opskrift-card-madplan">
+				<a href="./opskrift.html?id=207" class="opskrift-card-madplan">
 					<article class="anb-card">
 						<img src="./assets/img/one-pot-zucchini-mushroom-pasta.webp" alt="Pasta med squash" />
 						<div class="anb-body">
 							<h3 class="rec-name">Pasta med squash</h3>
-							<p class="anb-tid"><i class="fa-regular fa-clock"></i> 1,5 time | Begynder</p>
+							<p class="anb-tid"><i class="fa-regular fa-clock"></i> 00:25 | Begynder</p>
 						</div>
 					</article>
 				</a>
@@ -258,6 +261,7 @@
 			</div>
 		</section>
 	</main>
+
 	<!-- FOOTER -->
 	<footer>
 		<section class="nyhedsbrev">
@@ -281,7 +285,6 @@
 			<a href="#"><i class="fa-brands fa-youtube"></i></a>
 		</section>
 	</footer>
-
 </body>
 
 </html>

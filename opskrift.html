@@ -14,7 +14,7 @@
 </head>
 
 <body>
-	<!-- Global Navigation -->
+	<!-- Navigation -->
 	<nav>
 		<ul>
 			<li class="logo"><a href="./index.html">MadGlad</a></li>
@@ -25,22 +25,23 @@
 					Opskrifter <i class="fa-solid fa-chevron-down"></i>
 				</a>
 
+				<!-- Drowdown menu med vores valgte kategorier og det id de har i wordpress, så vi kan lytte efter click og hente de rigtige opskrifter -->
 				<ul class="dropdown-menu opskrifter-menu">
-					<li><a href="../opskrifter.html">Alle opskrifter</a></li>
+					<li><a href="../opskrifter.html?category=57">Alle opskrifter</a></li>
 					<div class="dropdown-divider"></div>
-					<li><a href="../opskrifter.html">Morgenmad & Brunch</a></li>
+					<li><a href="../opskrifter.html?category=58">Morgenmad & Brunch</a></li>
 					<div class="dropdown-divider"></div>
-					<li><a href="../opskrifter.html">Frokost & Madpakke</a></li>
+					<li><a href="../opskrifter.html?category=59">Frokost & Madpakke</a></li>
 					<div class="dropdown-divider"></div>
-					<li><a href="../opskrifter.html">Hovedretter / Aftensmad</a></li>
+					<li><a href="../opskrifter.html?category=60">Hovedretter / Aftensmad</a></li>
 					<div class="dropdown-divider"></div>
-					<li><a href="../opskrifter.html">Desserter</a></li>
+					<li><a href="../opskrifter.html?category=63">Desserter</a></li>
 					<div class="dropdown-divider"></div>
-					<li><a href="../opskrifter.html">Snacks & Småretter</a></li>
+					<li><a href="../opskrifter.html?category=61">Snacks & Småretter</a></li>
 					<div class="dropdown-divider"></div>
-					<li><a href="../opskrifter.html">Brød</a></li>
+					<li><a href="../opskrifter.html?category=62">Brød</a></li>
 					<div class="dropdown-divider"></div>
-					<li><a href="../opskrifter.html">Drikke</a></li>
+					<li><a href="../opskrifter.html?category=64">Drikke</a></li>
 				</ul>
 			</li>
 
@@ -68,6 +69,7 @@
 			</ul>
 		</div>
 	</nav>
+
 
 	<!-- Opskrift data hentes fra api og indsættes i denne div -->
 	<div class="opskrift-container"></div>
@@ -199,6 +201,29 @@
 
 		</div>
 	</section>
+	<!-- FOOTER -->
+	<footer>
+		<section class="nyhedsbrev">
+
+			<h2>Tilmeld dig vores nyhedsbrev!</h2>
+			<p>Få nem inspiration til hverdagsmad for hele familien.Vi deler lækre
+				opskrifter, smarte madtips og idéer til at gøre måltiderne både sundere og sjovere.
+			</p>
+			<p>
+				Få nye opskrifter direkte i din indbakke – klar til travle hverdage og hyggelige weekender.</p>
+
+
+			<input type="email" name="email" class="nyhedsbrev-email" placeholder="Indtast din email adresse..."
+				required>
+			<input type="button" value="Tilmeld nyhedsbrev" class="nyhedsbrev-btn">
+
+		</section>
+		<section class="socialMedia">
+			<a href="#"><i class="fa-brands fa-facebook"></i></a>
+			<a href="#"><i class="fa-brands fa-instagram"></i></a>
+			<a href="#"><i class="fa-brands fa-youtube"></i></a>
+		</section>
+	</footer>
 </body>
 
 </html>

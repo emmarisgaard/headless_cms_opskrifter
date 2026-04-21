@@ -152,6 +152,11 @@
     flex: 1;
 }
 
+.actionBtn:hover {
+    background-color: var(--lightGreen);
+    transition: var(--transitionHover);
+}
+
 .actionIcon {
     font-size: 1.2rem;
     color: var(--black);

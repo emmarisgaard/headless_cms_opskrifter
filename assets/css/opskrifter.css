@@ -20,11 +20,7 @@ body {
         display: none;
     }
 
-    /* position: sticky;
-    top: 120px;
-    /* justér efter højden på din navbar */
-    /* height: fit-content; */
-    */
+
 }
 
 
@@ -74,7 +70,7 @@ body {
    vises filter-indholdet ved at give det en max-height,
    så accordion-menuen kan foldes ud med animation */
 .filter-toggle:checked~.filter-indhold {
-    max-height: 500px;
+    max-height: 2000px;
 }
 
 /* FILTER RÆKKER */

@@ -3,34 +3,32 @@
 const baseUrl = "https://tester.emmarisgaard.dk/wp-json/wp/v2/posts";
 
 // find id fra URL
-const params = new URLSearchParams(window.location.search);
+const params = new URLSearchParams(window.location.search); //https://www.w3schools.com/jsref/prop_loc_search.asp
 const recipeId = params.get("id");
 
+// Funktion til at hente én specifik opskrift
 getRecipe();
 
 async function getRecipe() {
     try {
         const response = await fetch(
-            `${baseUrl}/${recipeId}?acf_format=standard`
+            `${baseUrl}/${recipeId}?acf_format=standard` //tager id fra den opskrift man har trykket på fra url, og tilføjer til vores api url, sammen med acf_format=standard for at få fat i acf felterne.
         );
 
-        const post = await response.json();
-        console.log(post);
+        const post = await response.json(); // konverterer json til javascript objekt
 
-        renderRecipe(post);
+        renderRecipe(post); //kører funktionen til at vise opskriften på siden
 
     } catch (error) {
-        console.log("Fejl:", error);
+        console.log("Fejl:", error); //viser fejl i konsollen
     }
 }
 
 
-// ----------------------
-// HERO + MAIN RENDER
-// ----------------------
+// Funktion til at vise opskriften på siden
 function renderRecipe(post) {
 
-    const container = document.querySelector(".opskrift-container");
+    const container = document.querySelector(".opskrift-container"); //fanger opskrift containeren og bruger innerHTML til at indsætte opskriften
 
     container.innerHTML = `
 
@@ -63,7 +61,7 @@ function renderRecipe(post) {
 
             <div class="heroSamling">
                 <p>Denne opskrift er en del af samlingen:</p>
-                <a href="#">${post.acf?.samling?.[0]?.name}</a>
+                <a href="./inspiration.html">${post.acf?.samling?.[0]?.name}</a>
             </div>
 
             <div class="heroIkoner">

@@ -8,6 +8,8 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 	<link rel="stylesheet" href="./assets/css/style.css" />
 	<link rel="stylesheet" href="./assets/css/samling.css" />
+	<script src="./assets/js/app.js" defer></script>
+
 </head>
 
 <body>
@@ -23,22 +25,23 @@
 					Opskrifter <i class="fa-solid fa-chevron-down"></i>
 				</a>
 
+				<!-- Drowdown menu med vores valgte kategorier og det id de har i wordpress, så vi kan lytte efter click og hente de rigtige opskrifter -->
 				<ul class="dropdown-menu opskrifter-menu">
-					<li><a href="#">Alle opskrifter</a></li>
+					<li><a href="../opskrifter.html?category=57">Alle opskrifter</a></li>
 					<div class="dropdown-divider"></div>
-					<li><a href="#">Morgenmad & Brunch</a></li>
+					<li><a href="../opskrifter.html?category=58">Morgenmad & Brunch</a></li>
 					<div class="dropdown-divider"></div>
-					<li><a href="#">Frokost & Madpakke</a></li>
+					<li><a href="../opskrifter.html?category=59">Frokost & Madpakke</a></li>
 					<div class="dropdown-divider"></div>
-					<li><a href="#">Hovedretter / Aftensmad</a></li>
+					<li><a href="../opskrifter.html?category=60">Hovedretter / Aftensmad</a></li>
 					<div class="dropdown-divider"></div>
-					<li><a href="#">Desserter</a></li>
+					<li><a href="../opskrifter.html?category=63">Desserter</a></li>
 					<div class="dropdown-divider"></div>
-					<li><a href="#">Snacks & Småretter</a></li>
+					<li><a href="../opskrifter.html?category=61">Snacks & Småretter</a></li>
 					<div class="dropdown-divider"></div>
-					<li><a href="#">Brød</a></li>
+					<li><a href="../opskrifter.html?category=62">Brød</a></li>
 					<div class="dropdown-divider"></div>
-					<li><a href="#">Drikke</a></li>
+					<li><a href="../opskrifter.html?category=64">Drikke</a></li>
 				</ul>
 			</li>
 
@@ -67,10 +70,11 @@
 		</div>
 	</nav>
 
+
 	<!-- Collection Hero -->
 	<section class="collectionHero">
 		<div class="collectionHeroInfo">
-			<h1 class="collectionTitle">Skjulte grøntsager</h1>
+			<h1 class="collectionTitle">Skjulte Grøntsager</h1>
 			<span class="collectionCount">(6 opskrifter)</span>
 			<p class="collectionDesc">
 				Har du børn, der ikke er vilde med grøntsager? I denne
@@ -79,7 +83,7 @@
 			</p>
 			<p class="collectionDesc">
 				Her finder du lækre retter som guacamolepasta og cremet
-				grøntsagssuppe, hvor smagen er i fokus – og
+				grøntsagssuppe, hvor smagen er i fokus - og
 				grøntsagerne glider ubemærket med.
 			</p>
 
@@ -89,11 +93,11 @@
 					<span class="actionLabel">Fjern fra<br>favoritter</span>
 				</div>
 				<div class="actionBtn">
-					<span class="actionIcon"><i class="fa-regular fa-calendar-plus"></i></span>
+					<span class="actionIcon"><i class="fa-solid fa-calendar"></i></span>
 					<span class="actionLabel">Tilføj til<br>madplan</span>
 				</div>
 				<div class="actionBtn">
-					<span class="actionIcon"><i class="fa-solid fa-cart-shopping"></i></span>
+					<span class="actionIcon"><i class="fa-solid fa-list"></i></span>
 					<span class="actionLabel">Tilføj til<br>indkøbsliste</span>
 				</div>
 				<div class="actionBtn">
@@ -123,7 +127,7 @@
 
 			<!-- Recipe 1 -->
 			<article class="recipeCard clickable-card">
-				<a href="opskrift.html" class="stretched-link"></a>
+				<a href="opskrift.html?id=240" class="stretched-link"></a>
 				<div class="recipeCardImage">
 					<img src="./assets/img/ultimate-veggie-burgers.webp" alt="Den ultimative veggie burger" />
 				</div>
@@ -133,15 +137,15 @@
 						<span class="favoriteStar"><i class="fa-regular fa-star"></i></span>
 					</div>
 					<div class="recipeMeta">
-						<span><i class="fa-regular fa-clock"></i> 1 time 30 min</span>
-						<span>| Begynder</span>
+						<span><i class="fa-regular fa-clock"></i> 02:15</span>
+						<span>| Avanceret</span>
 					</div>
 				</div>
 			</article>
 
 			<!-- Recipe 2 -->
 			<article class="recipeCard clickable-card">
-				<a href="opskrift.html" class="stretched-link"></a>
+				<a href="opskrift.html?id=243" class="stretched-link"></a>
 				<div class="recipeCardImage">
 					<img src="./assets/img/creamy-vegetable-soup.webp" alt="Cremet grøntsagssuppe" />
 				</div>
@@ -151,7 +155,7 @@
 						<span class="favoriteStar"><i class="fa-regular fa-star"></i></span>
 					</div>
 					<div class="recipeMeta">
-						<span><i class="fa-regular fa-clock"></i> 1 time 30 min</span>
+						<span><i class="fa-regular fa-clock"></i> 00:40</span>
 						<span>| Begynder</span>
 					</div>
 				</div>
@@ -159,7 +163,7 @@
 
 			<!-- Recipe 3 -->
 			<article class="recipeCard clickable-card">
-				<a href="opskrift.html" class="stretched-link"></a>
+				<a href="opskrift.html?id=246" class="stretched-link"></a>
 				<div class="recipeCardImage">
 					<img src="./assets/img/chunky-carrot-spaghetti-sauce.webp" alt="Gulerods pasta sovs" />
 				</div>
@@ -169,7 +173,7 @@
 						<span class="favoriteStar"><i class="fa-regular fa-star"></i></span>
 					</div>
 					<div class="recipeMeta">
-						<span><i class="fa-regular fa-clock"></i> 1 time 30 min</span>
+						<span><i class="fa-regular fa-clock"></i> 00:30</span>
 						<span>| Begynder</span>
 					</div>
 				</div>
@@ -177,7 +181,7 @@
 
 			<!-- Recipe 4 -->
 			<article class="recipeCard clickable-card">
-				<a href="opskrift.html" class="stretched-link"></a>
+				<a href="opskrift.html?id=235" class="stretched-link"></a>
 				<div class="recipeCardImage">
 					<img src="./assets/img/mashed-cauliflower.webp" alt="Blomkåls mos" />
 				</div>
@@ -187,7 +191,7 @@
 						<span class="favoriteStar"><i class="fa-regular fa-star"></i></span>
 					</div>
 					<div class="recipeMeta">
-						<span><i class="fa-regular fa-clock"></i> 1 time 30 min</span>
+						<span><i class="fa-regular fa-clock"></i> 00:25</span>
 						<span>| Begynder</span>
 					</div>
 				</div>
@@ -195,7 +199,7 @@
 
 			<!-- Recipe 5 -->
 			<article class="recipeCard clickable-card">
-				<a href="opskrift.html" class="stretched-link"></a>
+				<a href="opskrift.html?id=237" class="stretched-link"></a>
 				<div class="recipeCardImage">
 					<img src="./assets/img/sweet-potato-black-bean-veggie-burgers.webp"
 						alt="Sweet potato veggie burger" />
@@ -206,15 +210,15 @@
 						<span class="favoriteStar"><i class="fa-regular fa-star"></i></span>
 					</div>
 					<div class="recipeMeta">
-						<span><i class="fa-regular fa-clock"></i> 1 time 30 min</span>
-						<span>| Begynder</span>
+						<span><i class="fa-regular fa-clock"></i> 03:15</span>
+						<span>| Mellem</span>
 					</div>
 				</div>
 			</article>
 
 			<!-- Recipe 6 -->
 			<article class="recipeCard clickable-card">
-				<a href="opskrift.html" class="stretched-link"></a>
+				<a href="opskrift.html?id=249" class="stretched-link"></a>
 				<div class="recipeCardImage">
 					<img src="./assets/img/carrot-ginger-soup.webp" alt="Gulerod og ingefærs suppe" />
 				</div>
@@ -224,7 +228,7 @@
 						<span class="favoriteStar"><i class="fa-regular fa-star"></i></span>
 					</div>
 					<div class="recipeMeta">
-						<span><i class="fa-regular fa-clock"></i> 1 time 30 min</span>
+						<span><i class="fa-regular fa-clock"></i> 00:40</span>
 						<span>| Begynder</span>
 					</div>
 				</div>
@@ -243,9 +247,9 @@
 
 			<!-- Collection 1 -->
 			<article class="inspirationCard clickable-card">
-				<a href="samling.html" class="stretched-link"></a>
+				<a href="samling-grillaften.html" class="stretched-link"></a>
 				<div class="inspirationCardImage">
-					<img src="./assets/img/stove-top-burgers.webp" alt="Forårs grillaften" />
+					<img src="./assets/img/greek-salad.webp" alt="Græsk salat" />
 				</div>
 				<div class="inspirationCardBody">
 					<div class="inspirationCardHeader">
@@ -311,6 +315,7 @@
 	<!-- FOOTER -->
 	<footer>
 		<section class="nyhedsbrev">
+
 			<h2>Tilmeld dig vores nyhedsbrev!</h2>
 			<p>Få nem inspiration til hverdagsmad for hele familien.Vi deler lækre
 				opskrifter, smarte madtips og idéer til at gøre måltiderne både sundere og sjovere.
@@ -318,9 +323,11 @@
 			<p>
 				Få nye opskrifter direkte i din indbakke – klar til travle hverdage og hyggelige weekender.</p>
 
+
 			<input type="email" name="email" class="nyhedsbrev-email" placeholder="Indtast din email adresse..."
 				required>
 			<input type="button" value="Tilmeld nyhedsbrev" class="nyhedsbrev-btn">
+
 		</section>
 		<section class="socialMedia">
 			<a href="#"><i class="fa-brands fa-facebook"></i></a>

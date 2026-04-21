@@ -15,6 +15,7 @@
 </head>
 
 <body>
+	<!-- Navigation -->
 	<nav>
 		<ul>
 			<li class="logo"><a href="./index.html">MadGlad</a></li>
@@ -25,22 +26,23 @@
 					Opskrifter <i class="fa-solid fa-chevron-down"></i>
 				</a>
 
+				<!-- Drowdown menu med vores valgte kategorier og det id de har i wordpress, så vi kan lytte efter click og hente de rigtige opskrifter -->
 				<ul class="dropdown-menu opskrifter-menu">
-					<li><a href="#">Alle opskrifter</a></li>
+					<li><a href="../opskrifter.html?category=57">Alle opskrifter</a></li>
 					<div class="dropdown-divider"></div>
-					<li><a href="#">Morgenmad & Brunch</a></li>
+					<li><a href="../opskrifter.html?category=58">Morgenmad & Brunch</a></li>
 					<div class="dropdown-divider"></div>
-					<li><a href="#">Frokost & Madpakke</a></li>
+					<li><a href="../opskrifter.html?category=59">Frokost & Madpakke</a></li>
 					<div class="dropdown-divider"></div>
-					<li><a href="#">Hovedretter / Aftensmad</a></li>
+					<li><a href="../opskrifter.html?category=60">Hovedretter / Aftensmad</a></li>
 					<div class="dropdown-divider"></div>
-					<li><a href="#">Desserter</a></li>
+					<li><a href="../opskrifter.html?category=63">Desserter</a></li>
 					<div class="dropdown-divider"></div>
-					<li><a href="#">Snacks & Småretter</a></li>
+					<li><a href="../opskrifter.html?category=61">Snacks & Småretter</a></li>
 					<div class="dropdown-divider"></div>
-					<li><a href="#">Brød</a></li>
+					<li><a href="../opskrifter.html?category=62">Brød</a></li>
 					<div class="dropdown-divider"></div>
-					<li><a href="#">Drikke</a></li>
+					<li><a href="../opskrifter.html?category=64">Drikke</a></li>
 				</ul>
 			</li>
 
@@ -68,6 +70,7 @@
 			</ul>
 		</div>
 	</nav>
+
 	<main class="favoritter-page">
 
 		<!-- sidebar -->
@@ -132,25 +135,25 @@
 
 			<div class="favorit-header">
 				<i class="fa-solid fa-star"></i>
-				<h2>Mine favoritter</h2>
+				<h2>Mine favoritter - Forårs retter</h2>
 			</div>
 
 			<p class="samling-meta">
-				Forårs retter | 12 opskrifter | Oprettet af MadGlad
+				12 opskrifter | Oprettet af MadGlad
 			</p>
 
-			<a href="./opskrift.html" class="opskrift-card-favoritter">
+			<a href="./opskrift.html?id=252" class="opskrift-card-favoritter">
 				<div class="favorit-grid">
 					<article class="fav-card">
 						<img class="fav-card-img" src="./assets/img/stove-top-burgers.webp" alt="Burger">
 						<div class="fav-card-body">
 
 							<div class="fav-card-top">
-								<h3>Burger</h3>
+								<h3>Klassisk burger</h3>
 								<i class="fa-solid fa-star fav-star"></i>
 							</div>
 
-							<p class="fav-card-time"><i class="fa-regular fa-clock"></i> 1 time 30 min | Begynder</p>
+							<p class="fav-card-time"><i class="fa-regular fa-clock"></i> 00:30 | Begynder</p>
 
 							<div class="fav-card-actions">
 								<button class="fav-btn">+ Føj til madplan</button>
@@ -161,7 +164,7 @@
 					</article>
 			</a>
 
-			<a href="./opskrift.html" class="opskrift-card-favoritter">
+			<a href="./opskrift.html?id=230" class="opskrift-card-favoritter">
 				<article class="fav-card">
 					<img class="fav-card-img" src="./assets/img/fluffy-burger-buns.webp" alt="Burger boller">
 					<div class="fav-card-body">
@@ -169,7 +172,7 @@
 							<h3>Burger boller</h3>
 							<i class="fa-solid fa-star fav-star"></i>
 						</div>
-						<p class="fav-card-time"><i class="fa-regular fa-clock"></i> 1 time 30 min | Begynder</p>
+						<p class="fav-card-time"><i class="fa-regular fa-clock"></i> 02:20 | Mellem</p>
 						<div class="fav-card-actions">
 							<button class="fav-btn">+ Føj til madplan</button>
 							<button class="fav-btn">+ Føj til indkøb</button>
@@ -177,7 +180,7 @@
 					</div>
 				</article>
 			</a>
-			<a href="./opskrift.html" class="opskrift-card-favoritter">
+			<a href="./opskrift.html?id?171" class="opskrift-card-favoritter">
 
 				<article class="fav-card">
 					<img class="fav-card-img" src="./assets/img/greek-salad.webp" alt="Græsk salat">
@@ -186,7 +189,7 @@
 							<h3>Græsk salat</h3>
 							<i class="fa-solid fa-star fav-star"></i>
 						</div>
-						<p class="fav-card-time"><i class="fa-regular fa-clock"></i> 1 time 30 min | Begynder</p>
+						<p class="fav-card-time"><i class="fa-regular fa-clock"></i> 00:20 | Begynder</p>
 						<div class="fav-card-actions">
 							<button class="fav-btn">+ Føj til madplan</button>
 							<button class="fav-btn">+ Føj til indkøb</button>
@@ -195,7 +198,7 @@
 				</article>
 			</a>
 
-			<a href="./opskrift.html" class="opskrift-card-favoritter">
+			<a href="./opskrift.html?id=176" class="opskrift-card-favoritter">
 				<article class="fav-card">
 					<img class="fav-card-img" src="./assets/img/roasted-root-vegetables.webp" alt="Bagte rodfrugter">
 					<div class="fav-card-body">
@@ -203,7 +206,7 @@
 							<h3>Bagte rodfrugter</h3>
 							<i class="fa-solid fa-star fav-star"></i>
 						</div>
-						<p class="fav-card-time"><i class="fa-regular fa-clock"></i> 1 time 30 min | Begynder</p>
+						<p class="fav-card-time"><i class="fa-regular fa-clock"></i> 00:50 | Begynder</p>
 						<div class="fav-card-actions">
 							<button class="fav-btn">+ Føj til madplan</button>
 							<button class="fav-btn">+ Føj til indkøb</button>
@@ -212,7 +215,7 @@
 				</article>
 			</a>
 
-			<a href="./opskrift.html" class="opskrift-card-favoritter">
+			<a href="./opskrift.html?id=181" class="opskrift-card-favoritter">
 
 				<article class="fav-card">
 					<img class="fav-card-img" src="./assets/img/sweet-potato-fries.webp" alt="Sweet potato fries">
@@ -221,7 +224,7 @@
 							<h3>Sweet potato fries</h3>
 							<i class="fa-solid fa-star fav-star"></i>
 						</div>
-						<p class="fav-card-time"><i class="fa-regular fa-clock"></i> 1 time 30 min | Begynder</p>
+						<p class="fav-card-time"><i class="fa-regular fa-clock"></i> 00:40 | Begynder</p>
 						<div class="fav-card-actions">
 							<button class="fav-btn">+ Føj til madplan</button>
 							<button class="fav-btn">+ Føj til indkøb</button>
@@ -230,7 +233,7 @@
 				</article>
 			</a>
 
-			<a href="./opskrift.html" class="opskrift-card-favoritter">
+			<a href="./opskrift.html?id=184" class="opskrift-card-favoritter">
 
 				<article class="fav-card">
 					<img class="fav-card-img" src="./assets/img/potato-salad.webp" alt="Kartoffel salat">
@@ -239,7 +242,7 @@
 							<h3>Kartoffel salat</h3>
 							<i class="fa-solid fa-star fav-star"></i>
 						</div>
-						<p class="fav-card-time"><i class="fa-regular fa-clock"></i> 1 time 30 min | Begynder</p>
+						<p class="fav-card-time"><i class="fa-regular fa-clock"></i> 00:45 | Begynder</p>
 						<div class="fav-card-actions">
 							<button class="fav-btn">+ Føj til madplan</button>
 							<button class="fav-btn">+ Føj til indkøb</button>

@@ -12,8 +12,8 @@ const opskrifterDropdown = opskrifterBtn.closest(".dropdown");
 // Tilføj event listener til knappen for at toggle dropdown menuen. Når man trykker på opskrifter knappen, tilføjes eller fjernes class active på dropdown elementet, hvilket viser eller skjuler dropdown menuen.
 opskrifterBtn.addEventListener("click", function (e) {
     e.preventDefault();
-    minSideDropdown.classList.remove("active");
-    opskrifterDropdown.classList.toggle("active");
+    minSideDropdown.classList.remove("active"); //når man trykker på opskrifter knappen, fjernes class active på minSideDropdown elementet, hvilket skjuler min side dropdown menuen.
+    opskrifterDropdown.classList.toggle("active"); //tilføjer active class på opskrifterDropdown elementet, hvilket viser opskrifter dropdown menuen.
 });
 
 
@@ -27,8 +27,8 @@ const minSideDropdown = minSideBtn.closest(".dropdown");
 // Tilføj event listener til knappen for at toggle dropdown menuen. Når man trykker på minSide knappen, tilføjes eller fjernes class active på dropdown elementet, hvilket viser eller skjuler dropdown menuen.
 minSideBtn.addEventListener("click", function (e) {
     e.preventDefault();
-    opskrifterDropdown.classList.remove("active");
-    minSideDropdown.classList.toggle("active");
+    opskrifterDropdown.classList.remove("active"); //når man trykker på minSide knappen, fjernes class active på opskrifterDropdown elementet, hvilket skjuler opskrifter dropdown menuen.
+    minSideDropdown.classList.toggle("active"); //tilføjer active class på minSideDropdown elementet, hvilket viser min side dropdown menuen.
 });
 
 
@@ -37,12 +37,12 @@ minSideBtn.addEventListener("click", function (e) {
 
 // Luk dropdown når man klikker udenfor, ved at fjerne class active når klikket ikke er på dropdown elementerne
 document.addEventListener("click", function (e) {
-    if (!opskrifterDropdown.contains(e.target)) {
-        opskrifterDropdown.classList.remove("active");
+    if (!opskrifterDropdown.contains(e.target)) { // hvis klikket ikke er på opskrifterDropdown elementet
+        opskrifterDropdown.classList.remove("active"); // fjern class active på opskrifterDropdown elementet, hvilket skjuler opskrifter dropdown menuen.
     }
 
-    if (!minSideDropdown.contains(e.target)) {
-        minSideDropdown.classList.remove("active");
+    if (!minSideDropdown.contains(e.target)) { // hvis klikket ikke er på minSideDropdown elementet
+        minSideDropdown.classList.remove("active"); // fjern class active på minSideDropdown elementet, hvilket skjuler min side dropdown menuen.
     }
 });
 
